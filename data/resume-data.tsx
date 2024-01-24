@@ -1,4 +1,5 @@
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { ThirdwebLogo } from "@/public";
 
 export const RESUME_DATA = {
   name: "Rexan Wong",
@@ -31,4 +32,17 @@ export const RESUME_DATA = {
       },
     ],
   },
+  work: [
+    {
+      company: "Thirdweb",
+      link: "https://thirdweb.com",
+      badges: ["Remote"],
+      title: "Thirdweb Ambassador",
+      logo: ThirdwebLogo,
+      start: "2023",
+      end: "present",
+      description:
+        "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
+    },
+  ]
 } as const;
