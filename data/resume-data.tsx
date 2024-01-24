@@ -6,7 +6,7 @@ export const RESUME_DATA = {
   location: "Hong Kong, HKT",
   locationLink: "https://www.google.com/maps/place/HongKong",
   about:
-    "Full Stack Engineer focused on building products with extra attention to detail",
+    "16 year old high schooler and solopreneur building internet startups.  5x Web3 hackathon winner.",
   summary:
     "My summary",
   avatarUrl: "https://avatars.githubusercontent.com/u/96183717?v=4",
