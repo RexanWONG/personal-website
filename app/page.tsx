@@ -2,6 +2,7 @@ import React from 'react'
 import { Metadata } from 'next';
 import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 import { RESUME_DATA } from "@/data/resume-data";
 
@@ -18,7 +19,7 @@ const page = () => {
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.about}
+              {RESUME_DATA.about} 
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
@@ -65,6 +66,10 @@ const page = () => {
               ) : null}
             </div>
           </div>
+          <Avatar className="size-28">
+            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
+            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+          </Avatar>
         </div>
       </section>
     </main>
