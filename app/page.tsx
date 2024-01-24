@@ -109,7 +109,7 @@ const page = () => {
                     </div>
                   </div>
 
-                  <h4 className="font-mono text-sm leading-none">
+                  <h4 className="font-mono text-sm leading-none max-w-[500px]">
                     {work.title}
                   </h4>
                 </CardHeader>
