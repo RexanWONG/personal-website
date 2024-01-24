@@ -32,6 +32,24 @@ export const RESUME_DATA = {
       },
     ],
   },
+  skills: [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "NextJS",
+    "Vite",
+    "NodeJS",
+    "TailwindCSS",
+    "PostgreSQL",
+    "Supabase",
+    "Solidity",
+    "Foundry",
+    "Hardhat",
+    "Thirdweb",
+    "Alchemy",
+    "Swift",
+    "Python"
+  ],
   awards: [
     {
       name: "ETHGlobal Online",
