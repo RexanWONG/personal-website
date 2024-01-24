@@ -1,5 +1,5 @@
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
-import { ThirdwebLogo } from "@/public";
+import { CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo } from "@/public";
 
 export const RESUME_DATA = {
   name: "Rexan Wong",
@@ -32,6 +32,18 @@ export const RESUME_DATA = {
       },
     ],
   },
+  awards: [
+    {
+      name: "ETHGlobal Online",
+      link: "https://x.com/ETHGlobal/status/1717944376528351327?s=20",
+      badges: ["Hackathon", "Online", "500+ Teams"],
+      title: "Top 10 Finalistis (Winning team) + Mantle Best UX Award",
+      logo: EthGlobalLogo,
+      date: "10/2023",
+      description: "I built Koinu, an npm library that allows developers to include a cross chain experience within their dapps.  This project was selected as a finalist project, along with 9 other finalist projects, out of 500 projects.  Being the only under-18 to win the competition, and competiting against the best and most hardcore developers in the Web3 space, out of 515 projects, I learnt a lot more about Web3 and blockchain development during the course of the hackathon and it encouraged me to build blockchain applications more : the fact that I could compete, as a 15 year old, at the time, against the top developers of the Web3 space, and win, I am looking forward to build more applications for everyday users of Web3",
+      projectDetailsLink: "https://ethglobal.com/showcase/koinu-x8ced",
+    }
+  ],
   work: [
     {
       company: "Thirdweb",
@@ -49,7 +61,7 @@ export const RESUME_DATA = {
       link: "https://www.ee.cityu.edu.hk/prospective_students/Gifted_Education_Fund",
       badges: [],
       title: "Speaker and Mentor for the CityU-EE Gifted Education Programme on Cryptography, Blockchain, and Fintech",
-      logo: ThirdwebLogo,
+      logo: CityUniversityLogo, 
       start: "5/2023",
       end: "12/2023",
       description:
@@ -60,7 +72,7 @@ export const RESUME_DATA = {
       link: "https://www.artatechfin.com/",
       badges: [],
       title: "Mentor and Volunteer",
-      logo: ThirdwebLogo,
+      logo: IEEELogo,
       start: "7/2022",
       end: "8/2022",
       description:
