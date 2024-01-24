@@ -130,6 +130,34 @@ const page = () => {
           })}
         </Section>
         <Section> 
+          <h2 className="text-xl font-bold">Education</h2>
+          {RESUME_DATA.education.map((education) => {
+            return (
+              <Card key={education.school}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      <p>
+                        {education.school}
+                      </p>
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {education.start} - {education.end}
+                    </div>
+                  </div>
+
+                  <h4 className="font-mono text-sm leading-none max-w-[500px]">
+                    {education.degree}
+                  </h4>
+                </CardHeader>
+                <CardContent className="mt-2 text-xs">
+                  {education.activities}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+        <Section> 
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (

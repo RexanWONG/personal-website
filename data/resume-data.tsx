@@ -84,6 +84,22 @@ export const RESUME_DATA = {
       projectDetailsLink: "https://github.com/rexanwong/photorush",
     },
   ],
+  education: [
+    {
+      school: "Hong Kong International School",
+      degree: "High school, currently a junior",
+      start: "2020",
+      end: "2025",
+      activities: "Table Tennis Team, Student Digital Leadership Team"
+    },
+    {
+      school: "Christian Alliance International School",
+      degree: "Primary school",
+      start: "2013",
+      end: "2020",
+      activities: ""
+    },
+  ],
   work: [
     {
       company: "Thirdweb",
