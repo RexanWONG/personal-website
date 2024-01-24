@@ -29,7 +29,8 @@ const page = () => {
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={RESUME_DATA.locationLink}
-                target="_blank"
+                target="_blank" 
+                rel="noopener noreferrer"
               >
                 <GlobeIcon className="size-3" />
                 {RESUME_DATA.location}
@@ -43,7 +44,7 @@ const page = () => {
                   size="icon"
                   asChild
                 >
-                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                  <a href={`mailto:${RESUME_DATA.contact.email}`} target="_blank" rel="noopener noreferrer">
                     <MailIcon className="size-4" />
                   </a>
                 </Button>
@@ -56,7 +57,7 @@ const page = () => {
                   size="icon"
                   asChild
                 >
-                  <a href={social.url}>
+                  <a href={social.url} target="_blank" rel="noopener noreferrer">
                     <social.icon className="size-4" />
                   </a>
                 </Button>
@@ -64,7 +65,7 @@ const page = () => {
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                <a href={`mailto:${RESUME_DATA.contact.email}`} target="_blank" rel="noopener noreferrer">
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
@@ -89,7 +90,7 @@ const page = () => {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline max-w-[300px]" href={award.link}>
+                      <a className="hover:underline max-w-[300px]" href={award.link} target="_blank" rel="noopener noreferrer">
                         {award.name}
                       </a>
                       
@@ -119,7 +120,7 @@ const page = () => {
                 </CardContent>
                 <CardFooter>
                   <Button>
-                    <a href={award.projectDetailsLink}>
+                    <a href={award.projectDetailsLink} target="_blank" rel="noopener noreferrer">
                         View details
                     </a>
                   </Button>
@@ -136,7 +137,7 @@ const page = () => {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
+                      <a className="hover:underline" href={work.link} target="_blank" rel="noopener noreferrer">
                         {work.company}
                       </a>
 
