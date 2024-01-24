@@ -64,6 +64,16 @@ export const RESUME_DATA = {
       projectDetailsLink: "https://github.com/rexanwong/zk-protest",
     },
     {
+      name: "ETHGlobal Waterloo",
+      link: "https://x.com/rexan_wong/status/1673074124833402880?s=20",
+      badges: ["Hackathon", "In Person", "200+ teams"],
+      title: "1st Place",
+      logo: EthGlobalLogo,
+      date: "6/2023",
+      description: "ETHGlobal Waterloo is a 24hr long In person hackathon at Waterloo, CA, with over $200,000 USD in prizes as well as a series of curated summits, celebrating some of the most significant happenings & learnings from the past 12 months in web3.  The hackathon is focused on building Ethereum based applications with different bounties' tools and technologies.  The entire hackathon was an amazing learning process to me, especially for learning more about blockchain development - throughout the entire hackathon, I had many chances to talk face to face with top leaders and developers in the Web3 space - all these people, all the other teams, together in one big room in the town of Waterloo, building and sharing a passion together.  An even bigger impact personally was being able to travel all the way from where I live, Hong Kong, all the way to Waterloo, Ontario, Canada, and hack along with two University of Waterloo students, herby gaining exposure to university life and working as a development team.  We built a Video-sharing platform powered by ERC-6551 tokenbound-accounts, empowering the content creator economy through advertisers' staking in smart contracts.",
+      projectDetailsLink: "https://ethglobal.com/showcase/videre-wk314",
+    },
+    {
       name: "Apple Swift Student Challenge",
       link: "https://twitter.com/rexan_wong/status/1656085283836940288",
       badges: ["Hackathon", "Online", "13500+ Submissions"],
