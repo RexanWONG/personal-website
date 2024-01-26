@@ -32,19 +32,6 @@ const page = () => {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
-        <div className='flex items-center'>
-          <NavigationMenu>
-            <NavigationMenuList className="space-x-10"> 
-              {sections.map((section) => (
-                <NavigationMenuItem key={section.id}>
-                  <a href={`#${section.id}`} className="hover:underline">
-                    {section.title}
-                  </a>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
 
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -102,6 +89,19 @@ const page = () => {
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
+        </div>
+        <div className='flex items-center'>
+          <NavigationMenu>
+            <NavigationMenuList className="space-x-10"> 
+              {sections.map((section) => (
+                <NavigationMenuItem key={section.id}>
+                  <a href={`#${section.id}`} className="text-pretty font-mono text-sm hover:underline">
+                    {section.title}
+                  </a>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
