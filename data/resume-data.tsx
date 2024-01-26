@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   about:
     "16 year old high schooler and solopreneur building internet startups.  5x Web3 hackathon winner.",
   summary:
-    "Very driven, passionate, fun individual.",
+    `Very driven, passionate, fun individual.`,
   avatarUrl: "https://avatars.githubusercontent.com/u/96183717?v=4",
   personalWebsiteUrl: "https://rexanwong.me",
   contact: {
@@ -108,14 +108,14 @@ export const RESUME_DATA = {
       degree: "High school, currently a junior",
       start: "2020",
       end: "2025",
-      activities: "Table Tennis Team, Student Digital Leadership Team"
+      activities: "I am a member of the Table Tennis Team and the Student Digital Leadership Team.  Academically, I have been in the honour role every year at HKIS, given to students with a yearly GPA of 3.5-3.99."
     },
     {
       school: "Christian Alliance International School",
       degree: "Primary school",
       start: "2013",
       end: "2020",
-      activities: ""
+      activities: "Acheived academic honours with distinction for every year since grade 4 to grade 7, given to students with a yearly grade over 90%."
     },
   ],
   work: [
