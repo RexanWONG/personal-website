@@ -1,24 +1,51 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image';
-import { Metadata } from 'next';
 import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Section } from '@/components/ui/section';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
+
 import { Badge } from '@/components/ui/badge';
 
 import { RESUME_DATA } from "@/data/resume-data";
 
-export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
-};
+const sections = [
+  { title: 'Awards', id: 'awards' },
+  { title: 'Education', id: 'education' },
+  { title: 'Work Experience', id: 'work-experience' },
+];
 
 const page = () => {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+        <div className='flex items-center'>
+          <NavigationMenu>
+            <NavigationMenuList className="space-x-10"> 
+              {sections.map((section) => (
+                <NavigationMenuItem key={section.id}>
+                  <a href={`#${section.id}`} className="hover:underline">
+                    {section.title}
+                  </a>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -90,7 +117,7 @@ const page = () => {
             })}
           </div>
         </Section>
-        <Section> 
+        <Section id='awards'> 
           <h2 className="text-xl font-bold">Awards </h2>
           {RESUME_DATA.awards.map((award) => {
             return (
@@ -137,7 +164,7 @@ const page = () => {
             );
           })}
         </Section>
-        <Section> 
+        <Section id='education'> 
           <h2 className="text-xl font-bold">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
@@ -165,7 +192,7 @@ const page = () => {
             );
           })}
         </Section>
-        <Section> 
+        <Section id='work-experience'> 
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
