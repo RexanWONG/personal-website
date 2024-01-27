@@ -9,18 +9,13 @@ import { Section } from '@/components/ui/section';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
-
 import { Badge } from '@/components/ui/badge';
 
 import { RESUME_DATA } from "@/data/resume-data";
+import { CommandMenu } from '@/components/command-menu';
 
 const sections = [
   { title: 'Awards', id: 'awards' },
@@ -233,6 +228,15 @@ const page = () => {
           })}
         </Section>
       </section>
+
+      <CommandMenu
+          links={[
+            ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
+              url: socialMediaLink.url,
+              title: socialMediaLink.name,
+            })),
+          ]}
+      />
     </main>
   )
 }
