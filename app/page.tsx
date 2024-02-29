@@ -227,6 +227,46 @@ const page = () => {
             );
           })}
         </Section>
+        <Section id='data-science'> 
+          <h2 className="text-xl font-bold">Data Science</h2>
+          {RESUME_DATA.dataScience.map((item) => {
+            return (
+              <Card key={item.projectName}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      <a className="hover:underline" href={item.projectLink} target="_blank" rel="noopener noreferrer">
+                        {item.projectName}
+                      </a>
+
+                      <span className="inline-flex gap-x-1">
+                        {item.badges.map((badge) => (
+                          <Badge
+                            variant="secondary"
+                            className="align-middle text-xs"
+                            key={badge}
+                          >
+                            {badge}
+                          </Badge>      
+                        ))}
+                      </span>
+                    </h3>
+                  </div>
+                </CardHeader>
+                <CardContent className="text-xs">
+                  {item.projectDescription}
+                </CardContent>
+                <CardFooter>
+                  <Button>
+                    <a href={item.projectLink} target="_blank" rel="noopener noreferrer">
+                        View details
+                    </a>
+                  </Button>
+                </CardFooter>
+              </Card>
+            );
+          })}
+        </Section>
       </section>
 
       <CommandMenu

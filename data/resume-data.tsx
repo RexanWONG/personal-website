@@ -174,5 +174,28 @@ export const RESUME_DATA = {
       description:
         "At Cryptoblk, I had the opportunity to work with a talented team of developers and learn about the latest technologies and trends in the blockchain industry. I gained valuable experience in smart contract development and blockchain application development, and was able to contribute to a variety of projects that helped to improve the company's products and services.  I also worked with the business development team and IEEE HK Blockchain to host the Web3 Dev Hackathon 2022",
     },
+  ],
+  dataScience: [
+    {
+      projectName: "Sitting Posture Buddy",
+      projectDescription: "An iOS app that tracks your sitting posture in real time and alerts you when your posture becomes bad (like a cooked spaghetti noodle)",
+      badges: ["iOS", "CoreML", "CreateML", "UIKit"],
+      projectLink: "https://github.com/RexanWONG/sitting-posture-buddy"
+
+    },
+    {
+      projectName: "Kangaroo or Giraffe",
+      projectDescription: "A deep CNN image classifier that detects between a kangaroo or a giraffe",
+      badges: ["Python", "Tensorflow", "Keras"],
+      projectLink: "https://github.com/RexanWONG/kangaroo-or-giraffe"
+
+    },
+    {
+      projectName: "Analyzing referee decisions in the EPL",
+      projectDescription: 'Analyzing and uncovering patterns related to yellow card decisions and understand the tendencies of different referees in the english premier league from 2017-2022',
+      badges: ["Python", "Numpy", "Pandas"],
+      projectLink: "https://github.com/RexanWONG/analysis_referee_decisions_in_english_premier_league/blob/main/analyzing_referee_decisions_in_epl_2017_2022.ipynb"
+
+    },
   ]
 } as const;
