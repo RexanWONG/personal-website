@@ -197,5 +197,12 @@ export const RESUME_DATA = {
       projectLink: "https://github.com/RexanWONG/analysis_referee_decisions_in_english_premier_league/blob/main/analyzing_referee_decisions_in_epl_2017_2022.ipynb"
 
     },
-  ]
+  ],
+  music: [
+    {
+      awardName: "Grade 7 Piano Performance (Distinction)",
+      year: "2023",
+      description: "Issued by The Associated Board of the Royal Schools of Music",
+    },
+  ],
 } as const;

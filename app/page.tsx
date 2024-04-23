@@ -267,6 +267,22 @@ const page = () => {
             );
           })}
         </Section>
+        <Section id='music'> 
+          <h2 className="text-xl font-bold">Music</h2>
+          {RESUME_DATA.music.map((award) => {
+            return (
+              <Card key={award.awardName}>
+                <CardHeader>
+                  <h3 className="font-semibold">{award.awardName}</h3>
+                  <div className="text-sm text-gray-500">{award.year}</div>
+                </CardHeader>
+                <CardContent>
+                  {award.description}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </Section>
       </section>
 
       <CommandMenu
