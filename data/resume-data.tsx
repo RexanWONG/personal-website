@@ -184,6 +184,12 @@ export const RESUME_DATA = {
 
     },
     {
+      projectName: "Traning a model to play Doom from pixels",
+      projectDescription: "A deep neural network that is trained to collect objects in a 3D environment based on the game of Doom, using Sample Factory, an asynchronous implementation of the PPO algorithm.",
+      badges: ["Python", "Reinforcement learning", "Sample Factory", "VizDoom"],
+      projectLink: "https://huggingface.co/rexanwong/rl_course_vizdoom_health_gathering_supreme"
+    },
+    {
       projectName: "Kangaroo or Giraffe",
       projectDescription: "A deep CNN image classifier that detects between a kangaroo or a giraffe",
       badges: ["Python", "Tensorflow", "Keras"],
