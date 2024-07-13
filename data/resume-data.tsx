@@ -6,10 +6,7 @@ export const RESUME_DATA = {
   initials: "RW",
   location: "Hong Kong, HKT",
   locationLink: "https://www.google.com/maps/place/HongKong",
-  about:
-    "16 year old high schooler and solopreneur building internet startups.  5x Web3 hackathon winner.",
-  summary:
-    `Very driven, passionate, fun individual.`,
+  about: "16 // building videofast.gg //  @ethglobal finalist //  @apple swift student challenge scholar '23 //  @thirdweb ambassador",
   avatarUrl: "https://avatars.githubusercontent.com/u/96183717?v=4",
   personalWebsiteUrl: "https://rexanwong.me",
   contact: {
@@ -19,7 +16,7 @@ export const RESUME_DATA = {
         name: "GitHub",
         url: "https://github.com/RexanWONG",
         icon: GitHubIcon,
-      },
+      },     
       {
         name: "X",
         url: "https://twitter.com/rexan_wong",
@@ -33,22 +30,32 @@ export const RESUME_DATA = {
     ],
   },
   skills: [
-    "JavaScript",
     "TypeScript",
     "React",
     "NextJS",
     "Vite",
     "NodeJS",
     "TailwindCSS",
-    "PostgreSQL",
+    "ShadcnUI",
+    "Remotion",
     "Supabase",
+    "Vercel",
     "Solidity",
     "Foundry",
     "Hardhat",
     "Thirdweb",
-    "Alchemy",
     "Swift",
-    "Python"
+  ],
+  currentlyBuilding: [
+    {
+      name: 'VideoFast (videofast.gg)',
+      link: 'https://videofast.gg',
+      badges: ["Startup", "Remotion", "Video editing tool"],
+      title: "A super easy to use online video editor",
+      date: "Since Janurary 2024",
+      description: "I've started building VideoFast since the beginning of 2024, while working on schoolwork at the same time.  From iterating and constantly improving the design and the usability of the video editor, it has evolved into the easiest video editor that you will ever use.  Currently, VideoFast has got the #2 Product of the Day on Product Hunt and has over 100 regular users using the editor.",
+      projectDetailsLink: "https://producthunt.com/posts/videofast",
+    }
   ],
   awards: [
     {

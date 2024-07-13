@@ -31,9 +31,9 @@ const page = () => {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+            {/* <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
               {RESUME_DATA.about} 
-            </p>
+            </p> */}
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
@@ -85,7 +85,7 @@ const page = () => {
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
-        <div className='flex items-center'>
+        {/* <div className='flex items-center'>
           <NavigationMenu>
             <NavigationMenuList className="space-x-10"> 
               {sections.map((section) => (
@@ -97,20 +97,67 @@ const page = () => {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-        </div>
+        </div> */}
         <Section>
           <h2 className="text-xl font-bold">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
+            {RESUME_DATA.about}
           </p>
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1">  
             {RESUME_DATA.skills.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
             })}
           </div>
+        </Section>
+        <Section id='currentlyBuilding'> 
+          <h2 className="text-xl font-bold">Currently Building</h2>
+          {RESUME_DATA.currentlyBuilding.map((currentlyBuilding) => {
+            return (
+              <Card key={currentlyBuilding.name}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      <a className="hover:underline max-w-[300px]" href={currentlyBuilding.link} target="_blank" rel="noopener noreferrer">
+                        {currentlyBuilding.name}
+                      </a>
+                      
+                      <span className="inline-flex gap-x-1">
+                        {currentlyBuilding.badges.map((badge) => (
+                          <Badge
+                            variant="secondary"
+                            className="align-middle text-xxs"
+                            key={badge}
+                          >
+                            {badge}
+                          </Badge>
+                          ))}
+                        </span>
+                      </h3>
+                      <div className="text-sm tabular-nums text-gray-500">
+                        {currentlyBuilding.date}
+                      </div>
+                    </div>
+
+                    <h4 className="font-mono text-sm leading-none max-w-[500px]">
+                      {currentlyBuilding.title}
+                    </h4>
+                </CardHeader>
+                <CardContent className="mt-2 text-xs">
+                  {currentlyBuilding.description}
+                </CardContent>
+                <CardFooter>
+                  <Button>
+                    <a href={currentlyBuilding.projectDetailsLink} target="_blank" rel="noopener noreferrer">
+                        View details
+                    </a>
+                  </Button>
+                </CardFooter>
+              </Card>
+            );
+          })}
         </Section>
         <Section id='awards'> 
           <h2 className="text-xl font-bold">Awards </h2>
