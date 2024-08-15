@@ -70,10 +70,21 @@ const page = () => {
               ) : null}
             </div>
           </div>
-          <Avatar className="size-28">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar>
+          <div className="relative group">
+                <Avatar className="size-28">
+                    <AvatarImage
+                        alt={RESUME_DATA.name}
+                        src={RESUME_DATA.avatarUrl1}
+                        className="transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                    />
+                    <AvatarImage
+                        alt={RESUME_DATA.name}
+                        src={RESUME_DATA.avatarUrl2}
+                        className="absolute inset-0 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100"
+                    />
+                    <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+                </Avatar>
+            </div>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>

@@ -7,7 +7,8 @@ export const RESUME_DATA = {
   location: "Hong Kong, HKT",
   locationLink: "https://www.google.com/maps/place/HongKong",
   about: "16 // building videofast.gg //  @ethglobal finalist //  @apple swift student challenge scholar '23 //  @thirdweb ambassador",
-  avatarUrl: "https://avatars.githubusercontent.com/u/96183717?v=4",
+  avatarUrl1: "https://pbs.twimg.com/profile_images/1814304469099880448/KAxACa0Z_400x400.jpg",
+  avatarUrl2: "https://avatars.githubusercontent.com/u/96183717?v=4",
   personalWebsiteUrl: "https://rexanwong.me",
   contact: {
     email: "rexanwong@gmail.com",
