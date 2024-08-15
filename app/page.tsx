@@ -2,26 +2,19 @@
 
 import React from 'react'
 import Image from 'next/image';
+import '@vidstack/react/player/styles/base.css';
+import '@vidstack/react/player/styles/plyr/theme.css';
+import { MediaPlayer, MediaProvider } from '@vidstack/react';
+import { PlyrLayout, plyrLayoutIcons } from '@vidstack/react/player/layouts/plyr';
 import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Section } from '@/components/ui/section';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu"
 import { Badge } from '@/components/ui/badge';
 
 import { RESUME_DATA } from "@/data/resume-data";
 import { CommandMenu } from '@/components/command-menu';
-
-const sections = [
-  { title: 'Awards', id: 'awards' },
-  { title: 'Education', id: 'education' },
-  { title: 'Work Experience', id: 'work-experience' },
-];
 
 const page = () => {
   return (
@@ -31,9 +24,6 @@ const page = () => {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            {/* <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.about} 
-            </p> */}
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
@@ -85,19 +75,6 @@ const page = () => {
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
-        {/* <div className='flex items-center'>
-          <NavigationMenu>
-            <NavigationMenuList className="space-x-10"> 
-              {sections.map((section) => (
-                <NavigationMenuItem key={section.id}>
-                  <a href={`#${section.id}`} className="text-pretty font-mono text-sm hover:underline">
-                    {section.title}
-                  </a>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div> */}
         <Section>
           <h2 className="text-xl font-bold">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
@@ -145,9 +122,19 @@ const page = () => {
                       {currentlyBuilding.title}
                     </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {currentlyBuilding.description}
+                
+                <CardContent className="flex flex-col mt-2 gap-4">
+                  <p className='text-xs'>
+                    {currentlyBuilding.description}
+                  </p>
+                  {currentlyBuilding.videoLink  && (
+                    <MediaPlayer title={currentlyBuilding.name} src={currentlyBuilding.videoLink}>
+                        <MediaProvider />
+                        <PlyrLayout icons={plyrLayoutIcons}/>
+                    </MediaPlayer>
+                  )}
                 </CardContent>
+
                 <CardFooter>
                   <Button>
                     <a href={currentlyBuilding.projectDetailsLink} target="_blank" rel="noopener noreferrer">
@@ -192,9 +179,19 @@ const page = () => {
                       {award.title}
                     </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {award.description}
+
+                <CardContent className="flex flex-col mt-2 gap-4">
+                  <p className='text-xs'>
+                    {award.description}
+                  </p>
+                  {award.videoLink  && (
+                    <MediaPlayer title={award.name} src={award.videoLink}>
+                        <MediaProvider />
+                        <PlyrLayout icons={plyrLayoutIcons}/>
+                    </MediaPlayer>
+                  )}
                 </CardContent>
+
                 <CardFooter>
                   <Button>
                     <a href={award.projectDetailsLink} target="_blank" rel="noopener noreferrer">
@@ -274,7 +271,7 @@ const page = () => {
             );
           })}
         </Section>
-        <Section id='data-science'> 
+        {/* <Section id='data-science'> 
           <h2 className="text-xl font-bold">Data Science</h2>
           {RESUME_DATA.dataScience.map((item) => {
             return (
@@ -313,7 +310,7 @@ const page = () => {
               </Card>
             );
           })}
-        </Section>
+        </Section> */}
         <Section id='music'> 
           <h2 className="text-xl font-bold">Music</h2>
           {RESUME_DATA.music.map((award) => {

@@ -54,6 +54,7 @@ export const RESUME_DATA = {
       title: "A super easy to use online video editor",
       date: "Since Janurary 2024",
       description: "I've started building VideoFast since the beginning of 2024, while working on schoolwork at the same time.  From iterating and constantly improving the design and the usability of the video editor, it has evolved into the easiest video editor that you will ever use.  Currently, VideoFast has got the #2 Product of the Day on Product Hunt and has over 100 regular users using the editor.",
+      videoLink: "https://www.youtube.com/watch?v=b1WPCgIV_0I&t=6s",
       projectDetailsLink: "https://producthunt.com/posts/videofast",
     }
   ],
@@ -66,6 +67,7 @@ export const RESUME_DATA = {
       logo: EthGlobalLogo,
       date: "10/2023",
       description: "ETHOnline is a three week long online hackathon with over $200,000 USD in prizes as well as a series of curated summits, celebrating some of the most significant happenings & learnings from the past 12 months in web3.  The hackathon is focused on building Ethereum based applications with different bounties' tools and technologies.  I built Koinu, an npm library that allows developers to include a cross chain experience within their dapps.  This project was selected as a finalist project, along with 9 other finalist projects, out of 500 projects.  Being the only under-18 to win the competition, and competiting against the best and most hardcore developers in the Web3 space, out of 515 projects, I learnt a lot more about Web3 and blockchain development during the course of the hackathon and it encouraged me to build blockchain applications more : the fact that I could compete, as a 15 year old, at the time, against the top developers of the Web3 space, and win, I am looking forward to build more applications for everyday users of Web3",
+      videoLink: " https://www.youtube.com/watch?v=uNC-Auuz1T4",
       projectDetailsLink: "https://ethglobal.com/showcase/koinu-x8ced",
     },
     {
@@ -76,6 +78,7 @@ export const RESUME_DATA = {
       logo: EthGlobalLogo,
       date: "9/2023",
       description: "Consensys, one of the biggest blockchain companies, hosted NAVH: Not Another Virtual Hackathon beginning July 6th, 2023, for technical and non-technical builders to bring their skills to the table. Builders from anywhere in the world can join to compete for over $115,500 in bounties, using Cosensys products to build something.  I built Proof of Workout Protocol : a dApp on Linea (a blockchain developed by leading blockchain company Cosensys) designed to motivate and reward physical fitness through a gamified system of quests and token-based incentive.  ",
+      videoLink: "https://www.youtube.com/watch?v=OYj3Vru7Y4g",
       projectDetailsLink: "https://github.com/rexanwong/proof-of-workout-protocol",
     },
     {
@@ -86,6 +89,7 @@ export const RESUME_DATA = {
       logo: EthGlobalLogo,
       date: "6/2023",
       description: "Developer DAO, the biggest Web3 Developer Organisation, and Mina Protocol, a zero knowledge based blockchain with a market cap of $800 million USD, ran a week-long, remote hackathon with ~ $10,000 in prizes to be won in USDC, Mina Token and CODE.  The hackathon is focused on building zero-knowledge applications on Mina Protocol with SnarkyJS.   I built a privacy-focused decentralized zkApp that aims to enable anonymous and secure protests where participants can join and support various causes while preserving their privacy.  This hackathon was the most hardcore hackathon I've participated in : joining the hackathon, knowing very little about zero-knowledge (zk) technology, let alone building zk technology.  Throughout the process, I had to dive deep and learn all these new concepts while building my zkApp.  In the end, my project won first place in the hackathon, out of 40 other projects, and this victory provoked me to go further deeper into this tough concept of zero knowledge technology.",
+      videoLink: "https://www.youtube.com/watch?v=UkD0pTwgjBg&t=481s", 
       projectDetailsLink: "https://github.com/rexanwong/zk-protest",
     },
     {
@@ -96,6 +100,7 @@ export const RESUME_DATA = {
       logo: EthGlobalLogo,
       date: "6/2023",
       description: "ETHGlobal Waterloo is a 24hr long In person hackathon at Waterloo, CA, with over $200,000 USD in prizes as well as a series of curated summits, celebrating some of the most significant happenings & learnings from the past 12 months in web3.  The hackathon is focused on building Ethereum based applications with different bounties' tools and technologies.  The entire hackathon was an amazing learning process to me, especially for learning more about blockchain development - throughout the entire hackathon, I had many chances to talk face to face with top leaders and developers in the Web3 space - all these people, all the other teams, together in one big room in the town of Waterloo, building and sharing a passion together.  An even bigger impact personally was being able to travel all the way from where I live, Hong Kong, all the way to Waterloo, Ontario, Canada, and hack along with two University of Waterloo students, herby gaining exposure to university life and working as a development team.  We built a Video-sharing platform powered by ERC-6551 tokenbound-accounts, empowering the content creator economy through advertisers' staking in smart contracts.",
+      videoLink: null, 
       projectDetailsLink: "https://ethglobal.com/showcase/videre-wk314",
     },
     {
@@ -106,6 +111,7 @@ export const RESUME_DATA = {
       logo: EthGlobalLogo,
       date: "Q2 2023",
       description: "The Swift Student Challenge at WWDC (Worldwide Developers Conference) is an annual competition organized by Apple to celebrate the ingenuity and expertise of student developers using Swift.  Apple picks around 300 applications out of a pool of more than 10,000+ applicants to win, and I was one of the 300 applicants to win the challenge.   I built an iOS app/game that challenges users to find an image of a random word generated by the app in their photo album, then used machine learning models to verify that the image being selected matches the random word.",
+      videoLink: null, 
       projectDetailsLink: "https://github.com/rexanwong/photorush",
     },
   ],
