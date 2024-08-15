@@ -100,18 +100,6 @@ const page = () => {
                       <a className="hover:underline max-w-[300px]" href={currentlyBuilding.link} target="_blank" rel="noopener noreferrer">
                         {currentlyBuilding.name}
                       </a>
-                      
-                      <span className="inline-flex gap-x-1">
-                        {currentlyBuilding.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xxs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                          ))}
-                        </span>
                       </h3>
                       <div className="text-sm tabular-nums text-gray-500">
                         {currentlyBuilding.date}
@@ -133,6 +121,17 @@ const page = () => {
                         <PlyrLayout icons={plyrLayoutIcons}/>
                     </MediaPlayer>
                   )}
+                  <span className="inline-flex gap-x-1">
+                        {currentlyBuilding.badges.map((badge) => (
+                        <Badge
+                            variant="secondary"
+                            className="align-middle text-xxs"
+                            key={badge}
+                        >
+                            {badge}
+                        </Badge>
+                        ))}
+                    </span>
                 </CardContent>
 
                 <CardFooter>
@@ -157,18 +156,6 @@ const page = () => {
                       <a className="hover:underline max-w-[300px]" href={award.link} target="_blank" rel="noopener noreferrer">
                         {award.name}
                       </a>
-                      
-                      <span className="inline-flex gap-x-1">
-                        {award.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xxs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                          ))}
-                        </span>
                       </h3>
                       <div className="text-sm tabular-nums text-gray-500">
                         {award.date}
@@ -190,6 +177,17 @@ const page = () => {
                         <PlyrLayout icons={plyrLayoutIcons}/>
                     </MediaPlayer>
                   )}
+                  <span className="inline-flex gap-x-1">
+                    {award.badges.map((badge) => (
+                      <Badge
+                        variant="secondary"
+                        className="align-middle text-xxs"
+                        key={badge}
+                      >
+                        {badge}
+                      </Badge>
+                      ))}
+                    </span>
                 </CardContent>
 
                 <CardFooter>
