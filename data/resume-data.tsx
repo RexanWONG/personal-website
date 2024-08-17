@@ -14,6 +14,7 @@ export const RESUME_DATA = {
     "Won hackathons hosted by top blockchain companies such as Cosensys, Mina Protocol, and more",
     "Ambassador @ Thirdweb",    
     "Senior @ Hong Kong International School",
+    "Huge football fan (🇾🇪 #GGMU)"
   ],
   avatarUrl1: "https://pbs.twimg.com/profile_images/1814304469099880448/KAxACa0Z_400x400.jpg",
   avatarUrl2: "https://avatars.githubusercontent.com/u/96183717?v=4",
