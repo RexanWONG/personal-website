@@ -4,16 +4,24 @@ import { CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo } from "@/pub
 export const RESUME_DATA = {
   name: "Rexan Wong",
   initials: "RW",
-  location: "Hong Kong, HKT",
+  location: "Hong Kong, HKT",    
   locationLink: "https://www.google.com/maps/place/HongKong",
-  about: "16 // building videofast.gg //  @ethglobal finalist //  @apple swift student challenge scholar '23 //  @thirdweb ambassador",
+  about: "Yoooo I'm Rexan, a 16-year-old high schooler & solopreneur from Hong Kong who can build blockchain, iOS, and full-stack web apps.",
+  aboutBulletPoints: [   
+    "Creator of videofast.gg - #2 Product of the Day on Product Hunt, 500+ users",
+    "Selected as one of 10 winning teams out of 500 teams in the ETHGlobal Online 2023 hackathon.",
+    "Selected as one of 13000 students worldwide for the Apple Swift Student Challenge in 2023",
+    "Won hackathons hosted by top blockchain companies such as Cosensys, Mina Protocol, and more",
+    "Ambassador @ Thirdweb",    
+    "Senior @ Hong Kong International School",
+  ],
   avatarUrl1: "https://pbs.twimg.com/profile_images/1814304469099880448/KAxACa0Z_400x400.jpg",
   avatarUrl2: "https://avatars.githubusercontent.com/u/96183717?v=4",
   personalWebsiteUrl: "https://rexanwong.me",
   contact: {
     email: "rexanwong@gmail.com",
     social: [
-      {
+      {   
         name: "GitHub",
         url: "https://github.com/RexanWONG",
         icon: GitHubIcon,

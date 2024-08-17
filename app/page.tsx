@@ -19,7 +19,7 @@ import { CommandMenu } from '@/components/command-menu';
 const page = () => {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-3xl space-y-8 bg-white print:space-y-6">
 
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -87,10 +87,18 @@ const page = () => {
             </div>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
+          {/* <h2 className="text-xl font-bold">About</h2> */}
+          <p className='font-semibold'>
             {RESUME_DATA.about}
           </p>
+
+          <div className='mt-2'>
+            {RESUME_DATA.aboutBulletPoints.map((item) => (
+                <p className='mb-1'>
+                    • {item}
+                </p>
+            ))}
+          </div>
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
