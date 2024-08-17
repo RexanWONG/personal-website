@@ -21,11 +21,6 @@ export const RESUME_DATA = {
   contact: {
     email: "rexanwong@gmail.com",
     social: [
-      {   
-        name: "GitHub",
-        url: "https://github.com/RexanWONG",
-        icon: GitHubIcon,
-      },     
       {
         name: "X",
         url: "https://twitter.com/rexan_wong",
@@ -36,6 +31,11 @@ export const RESUME_DATA = {
         url: "https://www.linkedin.com/in/rexanwong/",
         icon: LinkedInIcon,
       },
+      {   
+        name: "GitHub",
+        url: "https://github.com/RexanWONG",
+        icon: GitHubIcon,
+      },     
     ],
   },
   skills: [
