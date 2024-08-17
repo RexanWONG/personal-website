@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   about: "Yoooo I'm Rexan, a 16-year-old high schooler & solopreneur from Hong Kong who can build blockchain, iOS, and full-stack web apps.",
   aboutBulletPoints: [   
     "Creator of videofast.gg - #2 Product of the Day on Product Hunt, 500+ users",
-    "Selected as one of 10 winning teams out of 500 teams in the ETHGlobal Online 2023 hackathon.",
+    "Selected as one of 10 winning teams out of 500 teams in the ETHGlobal Online 2023 hackathon",
     "Selected as one of 13000 students worldwide for the Apple Swift Student Challenge in 2023",
     "Won hackathons hosted by top blockchain companies such as Cosensys, Mina Protocol, and more",
     "Ambassador @ Thirdweb",    
