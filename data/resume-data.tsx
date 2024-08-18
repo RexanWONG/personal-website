@@ -63,7 +63,7 @@ export const RESUME_DATA = {
       badges: ["Startup", "Remotion", "Video editing tool"],
       title: "A super easy to use online video editor",
       date: "Since Janurary 2024",
-      description: "I've started building VideoFast since the beginning of 2024, while working on schoolwork at the same time.  From iterating and constantly improving the design and the usability of the video editor, it has evolved into the easiest video editor that you will ever use.  Currently, VideoFast has got the #2 Product of the Day on Product Hunt and has over 100 regular users using the editor.",
+      description: "I've started building VideoFast since the beginning of 2024, while working on schoolwork at the same time.  From iterating and constantly improving the design and the usability of the video editor, it has evolved into the easiest video editor that you will ever use.  Currently, VideoFast has got the #2 Product of the Day on Product Hunt and has over 500 regular users using the editor.",
       videoLink: "https://www.youtube.com/watch?v=b1WPCgIV_0I&t=6s",
       projectDetailsLink: "https://producthunt.com/posts/videofast",
     }
