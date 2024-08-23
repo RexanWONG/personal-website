@@ -1,4 +1,4 @@
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon } from "@/components/icons";
 import { CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo } from "@/public";
 
 export const RESUME_DATA = {
@@ -20,7 +20,7 @@ export const RESUME_DATA = {
   avatarUrl2: "https://avatars.githubusercontent.com/u/96183717?v=4",
   personalWebsiteUrl: "https://rexanwong.me",
   contact: {
-    email: "rexanwong@gmail.com",
+    email: null,
     social: [
       {
         name: "X",
@@ -33,10 +33,15 @@ export const RESUME_DATA = {
         icon: LinkedInIcon,
       },
       {   
+        name: "Instagram",
+        url: "https://instagram.com/rexanwonger",
+        icon: InstagramIcon,
+      },   
+      {   
         name: "GitHub",
         url: "https://github.com/RexanWONG",
         icon: GitHubIcon,
-      },     
+      },   
     ],
   },
   skills: [
