@@ -12,6 +12,7 @@ export const RESUME_DATA = {
     "Selected as one of 10 winning teams out of 500 teams in the ETHGlobal Online 2023 hackathon",
     "Selected as one of 13000 students worldwide for the Apple Swift Student Challenge in 2023",
     "Won hackathons hosted by top blockchain companies such as Cosensys, Mina Protocol, and more",
+    "Selected to represent Hong Kong in the International Blockchain Olympiad in the Netherlands (soon in Nov 2024!)",
     "Ambassador @ Thirdweb",    
     "Senior @ Hong Kong International School",
     "Huge football fan (🇾🇪 #GGMU)"
