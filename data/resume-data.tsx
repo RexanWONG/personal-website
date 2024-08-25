@@ -12,7 +12,6 @@ export const RESUME_DATA = {
     "Selected as one of 10 winning teams out of 500 teams in the ETHGlobal Online 2023 hackathon",
     "Selected as one of 13000 students worldwide for the Apple Swift Student Challenge in 2023",
     "Won hackathons hosted by top blockchain companies such as Cosensys, Mina Protocol, and more",
-    "Gold medalist in the Hong Kong Blockchain Olympiad 2024",
     "Selected to represent Hong Kong in the International Blockchain Olympiad in the Netherlands (soon in Nov 2024!)",
     "Ambassador @ Thirdweb",    
     "Senior @ Hong Kong International School",
@@ -78,6 +77,17 @@ export const RESUME_DATA = {
   ],
   awards: [
     {
+      name: "Hong Kong Blockchain Olympiad",
+      link: "https://www.hkbcol.org/",
+      badges: ["Olympiad", "In Person", "100+ teams"],
+      title: "Gold medalist award",
+      logo: Olympiad,
+      date: "8/2024",
+      description: "The HKBCOL is a blockchain solution design competition where teams from all secondary schools from Hong Kong compete to pitch and present their blockchain solution to industry leading judges. I was awarded the gold medal (first place) for my project Proof of Workout Protocol and selected to represent Hong Kong at the International Blockchain Olympiad in the Netherlands.",
+      videoLink: "https://www.youtube.com/watch?v=OYj3Vru7Y4g",
+      projectDetailsLink: "https://github.com/rexanwong/proof-of-workout-protocol",
+    },
+    {
       name: "ETHGlobal Online",
       link: "https://x.com/ETHGlobal/status/1717944376528351327?s=20",
       badges: ["Hackathon", "Online", "500+ Teams"],
@@ -88,17 +98,6 @@ export const RESUME_DATA = {
       videoLink: " https://www.youtube.com/watch?v=uNC-Auuz1T4",
       projectDetailsLink: "https://ethglobal.com/showcase/koinu-x8ced",
     },
-    {
-      name: "Hong Kong Blockchain Olympiad",
-      link: "https://www.hkbcol.org/",
-      badges: ["Olympiad", "In Person", "100+ teams"],
-      title: "Gold medalist award, selected to represent Hong Kong at the International Blockchain Olympiad in the Netherlands (to be held in Nov 2024!)",
-      logo: Olympiad,
-      date: "8/2024",
-      description: "The HKBCOL is a blockchain solution design competition where teams from all secondary schools from Hong Kong compete to pitch and present their blockchain solution to industry leading judges. I was awarded the gold medal (first place) for my project Proof of Workout Protocol and selected to represent Hong Kong at the International Blockchain Olympiad in the Netherlands.",
-      videoLink: "https://www.youtube.com/watch?v=OYj3Vru7Y4g",
-      projectDetailsLink: "https://github.com/rexanwong/proof-of-workout-protocol",
-  },
     {
       name: "Not Another Virtual Hackathon (NAVH) by Cosensys",
       link: "https://navhackathon.consensys.io/",
