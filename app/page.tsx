@@ -109,25 +109,32 @@ const page = () => {
           </div>
         </Section>
         <Section id='currentlyBuilding'> 
-          <h2 className="text-xl font-bold">Currently Building</h2>
+          <h2 className="text-xl font-bold">Currently building</h2>
           {RESUME_DATA.currentlyBuilding.map((currentlyBuilding) => {
             return (
               <Card key={currentlyBuilding.name}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline max-w-[300px]" href={currentlyBuilding.link} target="_blank" rel="noopener noreferrer">
-                        {currentlyBuilding.name}
-                      </a>
-                      </h3>
-                      <div className="text-sm tabular-nums text-gray-500">
-                        {currentlyBuilding.date}
-                      </div>
-                    </div>
+                  <div className="flex items-center gap-x-3">
+                    {currentlyBuilding.logo && (
+                      <Image src={currentlyBuilding.logo} alt={`${currentlyBuilding.name} logo`} className="w-10 h-10 rounded-lg object-contain" />
+                    )}
+                    <div className='flex-grow'>
+                      <div className="flex items-center justify-between gap-x-2 text-base">
+                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                          <a className="hover:underline max-w-[300px]" href={currentlyBuilding.link} target="_blank" rel="noopener noreferrer">
+                            {currentlyBuilding.name}
+                          </a>
+                          </h3>
+                          <div className="text-sm tabular-nums text-gray-500">
+                            {currentlyBuilding.date}
+                          </div>
+                        </div>
 
-                    <h4 className="font-mono text-sm leading-none max-w-[500px]">
-                      {currentlyBuilding.title}
-                    </h4>
+                        <h4 className="font-mono text-sm leading-none max-w-[500px]">
+                          {currentlyBuilding.title}
+                        </h4>
+                      </div>
+                  </div>
                 </CardHeader>
                 
                 <CardContent className="flex flex-col mt-2 gap-4">
@@ -168,32 +175,38 @@ const page = () => {
           <h2 className="text-xl font-bold">Awards </h2>
           {RESUME_DATA.awards.map((award) => {
             return (
-              <Card key={award.name}>
+              <Card key={award.name} className="w-full mb-4">
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline max-w-[300px]" href={award.link} target="_blank" rel="noopener noreferrer">
-                        {award.name}
-                      </a>
-                      </h3>
-                      <div className="text-sm tabular-nums text-gray-500">
-                        {award.date}
+                  <div className="flex items-center gap-x-3">
+                    {award.logo && (
+                      <Image src={award.logo} alt={`${award.name} logo`} className="w-12 h-12 rounded-lg object-contain" />
+                    )}
+                    <div className="flex-grow">
+                      <div className="flex items-center justify-between gap-x-2 text-base">
+                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                          <a className="hover:underline max-w-[300px]" href={award.link} target="_blank" rel="noopener noreferrer">
+                            {award.name}
+                          </a>
+                        </h3>
+                        <div className="text-sm tabular-nums text-gray-500">
+                          {award.date}
+                        </div>
                       </div>
+                      <h4 className="font-mono text-sm leading-none max-w-[500px] mt-1">
+                        {award.title}
+                      </h4>
                     </div>
-
-                    <h4 className="font-mono text-sm leading-none max-w-[500px]">
-                      {award.title}
-                    </h4>
+                  </div>
                 </CardHeader>
-
+        
                 <CardContent className="flex flex-col mt-2 gap-4">
                   <p className='text-xs'>
                     {award.description}
                   </p>
-                  {award.videoLink  && (
+                  {award.videoLink && (
                     <MediaPlayer title={award.name} src={award.videoLink}>
-                        <MediaProvider />
-                        <PlyrLayout icons={plyrLayoutIcons}/>
+                      <MediaProvider />
+                      <PlyrLayout icons={plyrLayoutIcons}/>
                     </MediaPlayer>
                   )}
                   <span className="inline-flex gap-x-1">
@@ -205,14 +218,14 @@ const page = () => {
                       >
                         {badge}
                       </Badge>
-                      ))}
-                    </span>
+                    ))}
+                  </span>
                 </CardContent>
-
+        
                 <CardFooter>
                   <Button>
                     <a href={award.projectDetailsLink} target="_blank" rel="noopener noreferrer">
-                        View details
+                      View details
                     </a>
                   </Button>
                 </CardFooter>
@@ -226,20 +239,27 @@ const page = () => {
             return (
               <Card key={education.school}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <p>
-                        {education.school}
-                      </p>
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
-                  </div>
+                  <div className="flex items-center gap-x-3">
+                      {education.logo && (
+                        <Image src={education.logo} alt={`${education.school} logo`} className="w-12 h-12 rounded-lg object-contain" />
+                      )}
+                      <div className='flex-grow'>
+                        <div className="flex items-center justify-between gap-x-2 text-base">
+                          <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                            <p>
+                              {education.school}
+                            </p>
+                          </h3>
+                          <div className="text-sm tabular-nums text-gray-500">
+                            {education.start} - {education.end}
+                          </div>
+                        </div>
 
-                  <h4 className="font-mono text-sm leading-none max-w-[500px]">
-                    {education.degree}
-                  </h4>
+                        <h4 className="font-mono text-sm leading-none max-w-[500px]">
+                          {education.degree}
+                        </h4>
+                      </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
                   {education.activities}
@@ -252,40 +272,45 @@ const page = () => {
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
-              <Card key={work.company}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link} target="_blank" rel="noopener noreferrer">
-                        {work.company}
-                      </a>
-
-                      <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                        ))}
-                      </span>
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end}
+                <Card key={work.company} className="w-full mb-4">
+                  <CardHeader>
+                    <div className="flex items-center gap-x-3">
+                      {work.logo && (
+                        <Image src={work.logo} alt={`${work.company} logo`} className="w-12 h-12 rounded-lg object-contain" />
+                      )}
+                      <div className="flex-grow">
+                        <div className="flex items-center justify-between gap-x-2 text-base">
+                          <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                            <a className="hover:underline" href={work.link} target="_blank" rel="noopener noreferrer">
+                              {work.company}
+                            </a>
+                          </h3>
+                          <div className="text-sm tabular-nums text-gray-500">
+                            {work.start} - {work.end}
+                          </div>
+                        </div>
+                        <h4 className="font-mono text-sm leading-none max-w-[500px] mt-1">
+                          {work.title}
+                        </h4>
+                      </div>
                     </div>
-                  </div>
-
-                  <h4 className="font-mono text-sm leading-none max-w-[500px]">
-                    {work.title}
-                  </h4>
-                </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
-                </CardContent>
-              </Card>
-            );
+                  </CardHeader>
+                  <CardContent className="mt-2 text-xs">
+                    {work.description}
+                    <span className="inline-flex gap-x-1 mt-4">
+                          {work.badges.map((badge) => (
+                            <Badge
+                              variant="secondary"
+                              className="align-middle text-xs"
+                              key={badge}
+                            >
+                              {badge}
+                            </Badge>
+                          ))}
+                    </span>
+                  </CardContent>
+                </Card>
+              );
           })}
         </Section>
         {/* <Section id='data-science'> 

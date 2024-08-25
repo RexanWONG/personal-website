@@ -1,5 +1,5 @@
 import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon } from "@/components/icons";
-import { CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo } from "@/public";
+import { CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast } from "@/public";
 
 export const RESUME_DATA = {
   name: "Rexan Wong",
@@ -18,8 +18,8 @@ export const RESUME_DATA = {
   ],
   avatarUrl1: "https://pbs.twimg.com/profile_images/1814304469099880448/KAxACa0Z_400x400.jpg",
   avatarUrl2: "https://avatars.githubusercontent.com/u/96183717?v=4",
-  personalWebsiteUrl: "https://rexanwong.me",
-  contact: {
+  personalWebsiteUrl: "https://rexanwong.xyz",
+  contact: {  
     email: null,
     social: [
       {
@@ -67,6 +67,7 @@ export const RESUME_DATA = {
       link: 'https://videofast.gg',
       badges: ["Startup", "Remotion", "Video editing tool"],
       title: "A super easy to use online video editor",
+      logo: VideoFast,
       date: "Since Janurary 2024",
       description: "I've started building VideoFast since the beginning of 2024, while working on schoolwork at the same time.  From iterating and constantly improving the design and the usability of the video editor, it has evolved into the easiest video editor that you will ever use.  Currently, VideoFast has got the #2 Product of the Day on Product Hunt and has over 500 regular users using the editor.",
       videoLink: "https://www.youtube.com/watch?v=b1WPCgIV_0I&t=6s",
@@ -74,6 +75,17 @@ export const RESUME_DATA = {
     }
   ],
   awards: [
+    {
+        name: "Hong Kong Blockchain Olympiad",
+        link: "https://www.hkbcol.org/",
+        badges: ["Olympiad", "In Person", "100+ teams"],
+        title: "Gold medalist award, selected to represent Hong Kong at the International Blockchain Olympiad in the Netherlands (to be held in Nov 2024!)",
+        logo: Olympiad,
+        date: "8/2024",
+        description: "The HKBCOL is a blockchain solution design competition where teams from all secondary schools from Hong Kong compete to pitch and present their blockchain solution to industry leading judges. I was awarded the gold medal (first place) for my project Proof of Workout Protocol and selected to represent Hong Kong at the International Blockchain Olympiad in the Netherlands.",
+        videoLink: "https://www.youtube.com/watch?v=OYj3Vru7Y4g",
+        projectDetailsLink: "https://github.com/rexanwong/proof-of-workout-protocol",
+    },
     {
       name: "ETHGlobal Online",
       link: "https://x.com/ETHGlobal/status/1717944376528351327?s=20",
@@ -90,7 +102,7 @@ export const RESUME_DATA = {
       link: "https://navhackathon.consensys.io/",
       badges: ["Hackathon", "Online", "70+ Projects"],
       title: "Winner of the IYKYK Linea Edition",
-      logo: EthGlobalLogo,
+      logo: Cosensys,
       date: "9/2023",
       description: "Consensys, one of the biggest blockchain companies, hosted NAVH: Not Another Virtual Hackathon beginning July 6th, 2023, for technical and non-technical builders to bring their skills to the table. Builders from anywhere in the world can join to compete for over $115,500 in bounties, using Cosensys products to build something.  I built Proof of Workout Protocol : a dApp on Linea (a blockchain developed by leading blockchain company Cosensys) designed to motivate and reward physical fitness through a gamified system of quests and token-based incentive.  ",
       videoLink: "https://www.youtube.com/watch?v=OYj3Vru7Y4g",
@@ -101,7 +113,7 @@ export const RESUME_DATA = {
       link: "https://twitter.com/rexan_wong/status/1681156987143462912",
       badges: ["Hackathon", "Online", "40+ Projects"],
       title: "1st Place",
-      logo: EthGlobalLogo,
+      logo: DeveloperDao,
       date: "6/2023",
       description: "Developer DAO, the biggest Web3 Developer Organisation, and Mina Protocol, a zero knowledge based blockchain with a market cap of $800 million USD, ran a week-long, remote hackathon with ~ $10,000 in prizes to be won in USDC, Mina Token and CODE.  The hackathon is focused on building zero-knowledge applications on Mina Protocol with SnarkyJS.   I built a privacy-focused decentralized zkApp that aims to enable anonymous and secure protests where participants can join and support various causes while preserving their privacy.  This hackathon was the most hardcore hackathon I've participated in : joining the hackathon, knowing very little about zero-knowledge (zk) technology, let alone building zk technology.  Throughout the process, I had to dive deep and learn all these new concepts while building my zkApp.  In the end, my project won first place in the hackathon, out of 40 other projects, and this victory provoked me to go further deeper into this tough concept of zero knowledge technology.",
       videoLink: "https://www.youtube.com/watch?v=UkD0pTwgjBg&t=481s", 
@@ -123,7 +135,7 @@ export const RESUME_DATA = {
       link: "https://twitter.com/rexan_wong/status/1656085283836940288",
       badges: ["Hackathon", "Online", "13500+ Submissions"],
       title: "WWDC23 Scholar",
-      logo: EthGlobalLogo,
+      logo: Apple,
       date: "Q2 2023",
       description: "The Swift Student Challenge at WWDC (Worldwide Developers Conference) is an annual competition organized by Apple to celebrate the ingenuity and expertise of student developers using Swift.  Apple picks around 300 applications out of a pool of more than 10,000+ applicants to win, and I was one of the 300 applicants to win the challenge.   I built an iOS app/game that challenges users to find an image of a random word generated by the app in their photo album, then used machine learning models to verify that the image being selected matches the random word.",
       videoLink: null, 
@@ -136,15 +148,17 @@ export const RESUME_DATA = {
       degree: "High school, currently a senior",
       start: "2020",
       end: "2025",
-      activities: "I am a member of the Table Tennis Team and a leader of the Student Digital Leadership Team.  Academically, I have been in the honour role every year at HKIS, given to students with a yearly GPA of 3.5-3.99.  I am also a teaching assistant for Advanced Computer Science Studio, the highest CS class in the school, helping the teacher prepare resources and provide help in class for students"
+      activities: "I am a member of the Table Tennis Team and a leader of the Student Digital Leadership Team.  Academically, I have been in the honour role every year at HKIS, given to students with a yearly GPA of 3.5-3.99.  I am also a teaching assistant for Advanced Computer Science Studio, the highest CS class in the school, helping the teacher prepare resources and provide help in class for students",
+      logo: HKIS
     },
     {
       school: "Christian Alliance International School",
       degree: "Primary school",
       start: "2013",
       end: "2020",
-      activities: "Acheived academic honours with distinction for every year since grade 4 to grade 7, given to students with a yearly grade over 90%."
-    },
+      activities: "Acheived academic honours with distinction for every year since grade 4 to grade 7, given to students with a yearly grade over 90%.",
+      logo: CAIS
+    }, 
   ],
   work: [
     {
@@ -185,7 +199,7 @@ export const RESUME_DATA = {
       link: "https://www.artatechfin.com/",
       badges: ["Internship", "Hybrid"],
       title: "Summer Intern",
-      logo: ThirdwebLogo,
+      logo: Arta,
       start: "7/2022",
       end: "8/2022",
       description:
@@ -196,7 +210,7 @@ export const RESUME_DATA = {
       link: "https://www.cryptoblk.io/",
       badges: ["Internship", "Hybrid"],
       title: "Summer Intern",
-      logo: ThirdwebLogo,
+      logo: Cryptoblk,
       start: "6/2022",
       end: "8/2022",
       description:
@@ -222,7 +236,6 @@ export const RESUME_DATA = {
       projectDescription: "A deep CNN image classifier that detects between a kangaroo or a giraffe",
       badges: ["Python", "Tensorflow", "Keras"],
       projectLink: "https://github.com/RexanWONG/kangaroo-or-giraffe"
-
     },
     {
       projectName: "Analyzing referee decisions in the EPL",
