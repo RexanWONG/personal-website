@@ -107,14 +107,14 @@ const page = () => {
             ))}
           </div>
         </Section>
-        <Section>
+        {/* <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">  
             {RESUME_DATA.skills.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
             })}
           </div>
-        </Section>
+        </Section> */}
         <Section id='currentlyBuilding'> 
           <h2 className="text-xl font-bold">Currently building</h2>
           {RESUME_DATA.currentlyBuilding.map((currentlyBuilding) => {
