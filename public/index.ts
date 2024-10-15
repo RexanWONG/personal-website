@@ -11,6 +11,7 @@ import Cryptoblk from './cryptoblk.png'
 import HKIS from './hkis.jpg'
 import CAIS from './cais.png'
 import VideoFast from './videofast.png'
+import TextBehindImage from './textbehindimage.png'
 
 export {
     ThirdwebLogo,
@@ -25,5 +26,6 @@ export {
     Cryptoblk,
     HKIS,
     CAIS,
-    VideoFast
+    VideoFast,
+    TextBehindImage
 }

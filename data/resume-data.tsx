@@ -1,5 +1,5 @@
 import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon } from "@/components/icons";
-import { CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast } from "@/public";
+import { CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage } from "@/public";
 
 export const RESUME_DATA = {
   name: "Rexan Wong",
@@ -8,11 +8,10 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/HongKong",
   about: "Yoooo I'm Rexan, a 16-year-old high schooler & solopreneur from Hong Kong who can build blockchain, iOS, and full-stack web apps.",
   aboutBulletPoints: [   
-    "Created my startup videofast.gg - #2 Product of the Day on Product Hunt, 500+ users",
-    "Selected as one of 10 winning teams out of 500 teams in the ETHGlobal Online 2023 hackathon",
-    "Selected as one of 13000 students worldwide for the Apple Swift Student Challenge in 2023",
-    "Won hackathons hosted by top blockchain companies such as Cosensys, Mina Protocol, and more",
-    "Selected to represent Hong Kong in the International Blockchain Olympiad in the Netherlands (soon in Nov 2024!)",
+    "Created my startup videofast.gg - #2 Product of the Day on Product Hunt, 1.6k users",
+    "Created text-behind-image, a free tool with 10K users and #1 Product of the Day",
+    "Won international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online + more",   
+    "4k followers on X/Twitter",
     "Ambassador @ Thirdweb",    
     "Senior @ Hong Kong International School",
     "Huge football fan (🇾🇪 #GGMU)"
@@ -64,6 +63,17 @@ export const RESUME_DATA = {
   ],
   currentlyBuilding: [
     {
+      name: 'Text Behind Image',
+      link: 'https://textbehindimage.rexanwong.xyz',
+      badges: ["Free tool", "Design tool"],
+      title: "Create text-behind-image designs easily",
+      logo: TextBehindImage,
+      date: "Since September 2024",
+      description: "Creating stunning text-behind-image designs are difficult and there's not many easy-to-use tools online that helps you do that. So I built my own free tool, in 3 hours with AI tools such as cursor.sh, that helps you create these stunning text-behind-image designs easily on your images. Since launching, the tool has gotten 10K users, 2 million views on X/Twitter, #1 Product of the Day on Product Hunt, and notable shoutouts from people like Ryan Hoover, the founder of Product Hunt.",
+      videoLink: "https://www.youtube.com/watch?v=3b_Rkv0GYV0",
+      projectDetailsLink: "https://producthunt.com/posts/text-behind-image",
+    },
+    {
       name: 'VideoFast (videofast.gg)',
       link: 'https://videofast.gg',
       badges: ["Startup", "Remotion", "Video editing tool"],
@@ -73,7 +83,7 @@ export const RESUME_DATA = {
       description: "I've started building VideoFast since the beginning of 2024, while working on schoolwork at the same time.  From iterating and constantly improving the design and the usability of the video editor, it has evolved into the easiest video editor that you will ever use.  Currently, VideoFast has got the #2 Product of the Day on Product Hunt and has over 500 regular users using the editor.",
       videoLink: "https://www.youtube.com/watch?v=b1WPCgIV_0I&t=6s",
       projectDetailsLink: "https://producthunt.com/posts/videofast",
-    }
+    },
   ],
   awards: [
     {
