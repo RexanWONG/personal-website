@@ -153,6 +153,16 @@ export const RESUME_DATA = {
       projectDetailsLink: "https://github.com/rexanwong/photorush",
     },
   ],
+  notableShoutouts: [
+    {
+      name: "Ryan Hoover, founder of Product Hunt:",
+      tweetLink: "https://twitter.com/rrhoover/status/1842977911617335783",
+    },
+    {
+      name: "Steven Tey, former developer advocate at Vercel:",
+      tweetLink: "https://twitter.com/steventey/status/1843026678580469916",
+    },
+  ],
   education: [
     {
       school: "Hong Kong International School",

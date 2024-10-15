@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image';
 import '@vidstack/react/player/styles/base.css';
 import '@vidstack/react/player/styles/plyr/theme.css';
@@ -17,6 +17,13 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { CommandMenu } from '@/components/command-menu';
 
 const page = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-3xl space-y-8 bg-white print:space-y-6">
@@ -136,7 +143,6 @@ const page = () => {
                       </div>
                   </div>
                 </CardHeader>
-                
                 <CardContent className="flex flex-col mt-2 gap-4">
                   <p className='text-xs'>
                     {currentlyBuilding.description}
@@ -232,6 +238,21 @@ const page = () => {
               </Card>
             );
           })}
+        </Section>
+        <Section id='notableShoutouts'>
+          <h2 className="text-xl font-bold">Notable Shoutouts</h2>
+          {RESUME_DATA.notableShoutouts.map((shoutout) => (
+            <Card key={shoutout.name}>
+              <CardHeader>
+                <h3 className="font-semibold">{shoutout.name}</h3>
+              </CardHeader>
+              <CardContent>
+                <blockquote className="twitter-tweet">
+                  <a href={shoutout.tweetLink}>View Tweet</a>
+                </blockquote>
+              </CardContent>
+            </Card>
+          ))}
         </Section>
         <Section id='education'> 
           <h2 className="text-xl font-bold">Education</h2>
