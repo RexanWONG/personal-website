@@ -226,7 +226,7 @@ export const RESUME_DATA = {
       description:
         "During the summer of 2022, I interned at Arta Tech Fin as a blockchain research intern. My responsibilities included conducting research on blockchain technologies and their potential applications in the financial industry.  At Arta Tech Fin, I had the chance to work with experienced professionals in the financial industry and learn about the latest trends and developments in blockchain technology. I gained valuable insights into how blockchain can be used to solve problems and improve processes in the financial sector, and was able to contribute to the company's research efforts.",
     },
-    {
+    { 
       company: "CryptoBLK Limited",
       link: "https://www.cryptoblk.io/",
       badges: ["Internship", "Hybrid"],
@@ -267,6 +267,11 @@ export const RESUME_DATA = {
     },
   ],
   music: [
+    {
+      awardName: "Grade 8 Piano Performance (Pass)",
+      year: "2024",
+      description: "Issued by The Associated Board of the Royal Schools of Music",
+    },
     {
       awardName: "Grade 7 Piano Performance (Distinction)",
       year: "2023",
