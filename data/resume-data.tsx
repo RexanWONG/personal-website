@@ -169,7 +169,7 @@ export const RESUME_DATA = {
       degree: "High school, currently a senior",
       start: "2020",
       end: "2025",
-      activities: "I am a member of the Table Tennis Team and a leader of the Student Digital Leadership Team.  Academically, I have been in the honour role every year at HKIS, given to students with a yearly GPA of 3.5-3.99.  I am also a teaching assistant for Advanced Computer Science Studio, the highest CS class in the school, helping the teacher prepare resources and provide help in class for students",
+      activities: "I am a member of the Table Tennis Team and a leader of the Student Digital Leadership Team.  Academically, I have been in the honour roll every year at HKIS, given to students with a yearly GPA of 3.5-3.99.  I am also a teaching assistant for Advanced Computer Science Studio, the highest CS class in the school, helping the teacher prepare resources and provide help in class for students",
       logo: HKIS
     },
     {
