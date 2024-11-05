@@ -6,7 +6,7 @@ export const RESUME_DATA = {
   initials: "RW",
   location: "Hong Kong, HKT",    
   locationLink: "https://www.google.com/maps/place/HongKong",
-  about: "Yoooo I'm Rexan, a 16-year-old high schooler & solopreneur from Hong Kong who can build blockchain, iOS, and full-stack web apps.",
+  about: "Yoooo I'm Rexan, a 17-year-old high schooler & solopreneur from Hong Kong who can build blockchain, iOS, and full-stack web apps.",
   aboutBulletPoints: [   
     "Created my startup videofast.gg - #2 Product of the Day on Product Hunt, 1.6k users",
     "Created text-behind-image, a free tool with 30K users and #1 Product of the Day",
