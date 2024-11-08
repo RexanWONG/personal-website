@@ -19,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/rexanwong.ico" type="image/x-icon" />
+        <meta name="google-adsense-account" content="ca-pub-1609710199882100"></meta>
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class"
