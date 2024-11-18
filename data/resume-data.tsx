@@ -7,11 +7,11 @@ export const RESUME_DATA = {
   location: "Hong Kong, HKT",    
   locationLink: "https://www.google.com/maps/place/HongKong",
   about: "Yoooo I'm Rexan, a 17-year-old high schooler & solopreneur from Hong Kong who can build blockchain, iOS, and full-stack web apps.",
-  aboutBulletPoints: [   
+  aboutBulletPoints: [ 
+    "Created text-behind-image, a free design tool with 50K users and #1 Product of the Day",  
     "Created my startup videofast.gg - #2 Product of the Day on Product Hunt, 1.6k users",
-    "Created text-behind-image, a free tool with 30K users and #1 Product of the Day",
     "Won international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online + more",   
-    "4k followers on X/Twitter",
+    "6k followers on X/Twitter",
     "Ambassador @ Thirdweb",    
     "Senior @ Hong Kong International School",
     "Huge football fan (🇾🇪 #GGMU)"
@@ -69,7 +69,7 @@ export const RESUME_DATA = {
       title: "Create text-behind-image designs easily",
       logo: TextBehindImage,
       date: "Since September 2024",
-      description: "Creating stunning text-behind-image designs are difficult and there's not many easy-to-use tools online that helps you do that. So I built my own free tool, in 3 hours with AI tools such as cursor.sh, that helps you create these stunning text-behind-image designs easily on your images. Since launching, the tool has gotten 10K users, 2 million views on X/Twitter, #1 Product of the Day on Product Hunt, and notable shoutouts from people like Ryan Hoover, the founder of Product Hunt.",
+      description: "Creating stunning text-behind-image designs are difficult and there's not many easy-to-use tools online that helps you do that. So I built my own free tool, in 3 hours with AI tools such as cursor.sh, that helps you create these stunning text-behind-image designs easily on your images. Since launching, the tool has gotten 50K users, 3 million views on X/Twitter, #1 Product of the Day on Product Hunt, and notable shoutouts from people like Ryan Hoover, the founder of Product Hunt.",
       videoLink: "https://www.youtube.com/watch?v=3b_Rkv0GYV0",
       projectDetailsLink: "https://producthunt.com/posts/text-behind-image",
     },
