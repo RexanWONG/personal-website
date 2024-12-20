@@ -1,3 +1,4 @@
+import RexanWong from './rexanwong.png'
 import ThirdwebLogo from './thirdweb.png'
 import CityUniversityLogo from './cityuniversity.png'
 import EthGlobalLogo from './ethglobal.jpeg'
@@ -13,7 +14,8 @@ import CAIS from './cais.png'
 import VideoFast from './videofast.png'
 import TextBehindImage from './textbehindimage.png'
 
-export {
+export {    
+    RexanWong,
     ThirdwebLogo,
     CityUniversityLogo,
     EthGlobalLogo,

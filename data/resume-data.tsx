@@ -1,5 +1,5 @@
 import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon } from "@/components/icons";
-import { CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage } from "@/public";
+import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage } from "@/public";
 
 export const RESUME_DATA = {
   name: "Rexan Wong",
@@ -16,7 +16,7 @@ export const RESUME_DATA = {
     "Senior @ Hong Kong International School",
     "Huge football fan (🇾🇪 #GGMU)"
   ],
-  avatarUrl1: "https://pbs.twimg.com/profile_images/1847941005330579456/aIZE4J_J_400x400.jpg",
+  avatarUrl1: RexanWong,
   avatarUrl2: "https://avatars.githubusercontent.com/u/96183717?v=4",
   personalWebsiteUrl: "https://rexanwong.xyz",
   contact: {  

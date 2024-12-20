@@ -15,6 +15,7 @@ import { Badge } from '@/components/ui/badge';
 
 import { RESUME_DATA } from "@/data/resume-data";
 import { CommandMenu } from '@/components/command-menu';
+import { RexanWong } from '@/public';
 
 const page = () => {
   useEffect(() => {
@@ -81,7 +82,7 @@ const page = () => {
                 <Avatar className="size-28">
                     <AvatarImage
                         alt={RESUME_DATA.name}
-                        src={RESUME_DATA.avatarUrl1}
+                        src={RexanWong.src}
                         className="transition-opacity duration-300 ease-in-out group-hover:opacity-0"
                     />
                     <AvatarImage
