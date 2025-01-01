@@ -11,7 +11,7 @@ export const RESUME_DATA = {
     "Created text-behind-image, a design tool with 200K users and #1 on Product Hunt",  
     "Created videofast.gg - #2 Product of the Day on Product Hunt, 1.6k users",
     "Won international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online + more",   
-    "7k followers on X/Twitter",
+    "10k followers on X/Twitter",
     "Ambassador @ Thirdweb",    
     "Senior @ Hong Kong International School",
     "Huge football fan (🇾🇪 #GGMU)"
