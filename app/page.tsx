@@ -240,7 +240,7 @@ const page = () => {
             );
           })}
         </Section>
-        <Section id='notableShoutouts'>
+        {/* <Section id='notableShoutouts'>
           <h2 className="text-xl font-bold">Notable Shoutouts</h2>
           {RESUME_DATA.notableShoutouts.map((shoutout) => (
             <Card key={shoutout.name}>
@@ -254,7 +254,7 @@ const page = () => {
               </CardContent>
             </Card>
           ))}
-        </Section>
+        </Section> */}
         <Section id='education'> 
           <h2 className="text-xl font-bold">Education</h2>
           {RESUME_DATA.education.map((education) => {

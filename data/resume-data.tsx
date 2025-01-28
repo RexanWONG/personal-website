@@ -1,4 +1,4 @@
-import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon, YouTubeIcon } from "@/components/icons";
 import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage } from "@/public";
 
 export const RESUME_DATA = {
@@ -6,14 +6,12 @@ export const RESUME_DATA = {
   initials: "RW",
   location: "Hong Kong, HKT",    
   locationLink: "https://www.google.com/maps/place/HongKong",
-  about: "Yoooo I'm Rexan, a 17-year-old high schooler & entrepreneur from Hong Kong who can build blockchain, iOS, and full-stack web apps.",
-  aboutBulletPoints: [ 
-    "Created text-behind-image, a design tool with 200K users and #1 on Product Hunt",  
-    "Created videofast.gg - #2 Product of the Day on Product Hunt, 1.6k users",
+  about: "I'm a 17 y/o high school student, entrepreneur, developer, & influencer from Hong Kong.",
+  aboutBulletPoints: [
+    "11K followers on X/Twitter",
+    "Created text-behind-image, a design tool with 300K users and #1 on Product Hunt",  
     "Won international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online + more",   
-    "10k followers on X/Twitter",
-    "Ambassador @ Thirdweb",    
-    "Senior @ Hong Kong International School",
+    "Senior @ Hong Kong International School", 
     "Huge football fan (🇾🇪 #GGMU)"
   ],
   avatarUrl1: RexanWong,
@@ -27,16 +25,21 @@ export const RESUME_DATA = {
         url: "https://twitter.com/rexan_wong",
         icon: XIcon,
       },
+      {   
+        name: "Instagram",
+        url: "https://instagram.com/rexanwonger",
+        icon: InstagramIcon,
+      },
+      {
+        name: "YouTube",
+        url: "https://www.youtube.com/@rexanwong/videos",
+        icon: YouTubeIcon,
+      },
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/rexanwong/",
         icon: LinkedInIcon,
       },
-      {   
-        name: "Instagram",
-        url: "https://instagram.com/rexanwonger",
-        icon: InstagramIcon,
-      },   
       {   
         name: "GitHub",
         url: "https://github.com/RexanWONG",
@@ -202,7 +205,7 @@ export const RESUME_DATA = {
       start: "5/2023",
       end: "12/2023",
       description:
-        "The “Coding, Cryptography and FinTech (CCF) Skills Education for Gifted Students” programm is a programm aimed for the most gifted high school students around Hong Kong, teaching them about coding, cryptography, and fintech.  As a speaker and a mentor, I hosted workshops and lectures for the program to teach the students about these topics",
+        "The Coding, Cryptography and FinTech (CCF) Skills Education for Gifted Students programm is a programm aimed for the most gifted high school students around Hong Kong, teaching them about coding, cryptography, and fintech.  As a speaker and a mentor, I hosted workshops and lectures for the program to teach the students about these topics",
     },
     {
       company: "IEEE Blockchain Hong Kong",
