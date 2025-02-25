@@ -1,5 +1,5 @@
 import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon, YouTubeIcon } from "@/components/icons";
-import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage } from "@/public";
+import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage, Bulletpen } from "@/public";
 
 export const RESUME_DATA = {
   name: "Rexan Wong",
@@ -66,14 +66,25 @@ export const RESUME_DATA = {
   currentlyBuilding: [
     {
       name: 'Text Behind Image',
-      link: 'https://textbehindimage.rexanwong.xyz',
-      badges: ["Free tool", "Design tool"],
+      link: 'https://textbehindimage.app',
+      badges: ["Startup", "Design tool"],
       title: "Create text-behind-image designs easily",
       logo: TextBehindImage,
       date: "Since September 2024",
-      description: "Creating stunning text-behind-image designs are difficult and there's not many easy-to-use tools online that helps you do that. So I built my own free tool, in 3 hours with AI tools such as cursor.sh, that helps you create these stunning text-behind-image designs easily on your images. Since launching, the tool has gotten 200K users, 3 million views on X/Twitter, #1 Product of the Day on Product Hunt, and notable shoutouts from people like Ryan Hoover, the founder of Product Hunt.",
+      description: "Creating stunning text-behind-image designs are difficult and there's not many easy-to-use tools online that helps you do that. So I built my own free tool, in 3 hours with AI tools such as cursor.sh, that helps you create these stunning text-behind-image designs easily on your images. Since launching, the tool has got 300K users, 3 million views on X/Twitter, #1 Product of the Day on Product Hunt, and notable shoutouts from people like Ryan Hoover, the founder of Product Hunt.",
       videoLink: "https://www.youtube.com/watch?v=5Oy23JO4qCI",
-      projectDetailsLink: "https://producthunt.com/posts/text-behind-image",
+      projectDetailsLink: "https://textbehindimage.app",
+    },
+    {
+      name: 'Bulletpen (bulletpen.ai)',
+      link: 'https://bulletpen.ai',
+      badges: ["Startup","Writing tool"],
+      title: "Write great essays while you yap",
+      logo: Bulletpen,
+      date: "Since December 2024",
+      description: "Writing is hard, and turning your ideas and thoughts into polished content is even harder. Most writing tools are either too basic or too complex, and none of them help you actually improve your writing in real-time. So I built Bulletpen, an AI app that transforms your spoken thoughts into well-structured, polished writing in real time. Since launching, it's grown to 2K active users and reached $1K MRR.",
+      videoLink: "https://youtu.be/9MLg6TZolpc",
+      projectDetailsLink: "https://bulletpen.ai",
     },
     {
       name: 'VideoFast (videofast.gg)',
@@ -84,7 +95,7 @@ export const RESUME_DATA = {
       date: "Since Janurary 2024",
       description: "I've started building VideoFast since the beginning of 2024, while working on schoolwork at the same time.  From iterating and constantly improving the design and the usability of the video editor, it has evolved into the easiest video editor that you will ever use.  Currently, VideoFast has got the #2 Product of the Day on Product Hunt and has over 500 regular users using the editor.",
       videoLink: "https://www.youtube.com/watch?v=b1WPCgIV_0I&t=6s",
-      projectDetailsLink: "https://producthunt.com/posts/videofast",
+      projectDetailsLink: "https://videofast.gg",
     },
   ],
   awards: [

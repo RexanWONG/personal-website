@@ -13,6 +13,7 @@ import HKIS from './hkis.jpg'
 import CAIS from './cais.png'
 import VideoFast from './videofast.png'
 import TextBehindImage from './textbehindimage.png'
+import Bulletpen from './bulletpen.png'
 
 export {    
     RexanWong,
@@ -29,5 +30,6 @@ export {
     HKIS,
     CAIS,
     VideoFast,
-    TextBehindImage
+    TextBehindImage,
+    Bulletpen
 }
