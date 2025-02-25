@@ -6,13 +6,12 @@ export const RESUME_DATA = {
   initials: "RW",
   location: "Hong Kong, HKT",    
   locationLink: "https://www.google.com/maps/place/HongKong",
-  about: "I'm a 17 y/o high school student, entrepreneur, developer, & influencer from Hong Kong.",
+  about: "I'm a 17 y/o high school student, entrepreneur, developer, & influencer from Hong Kong",
   aboutBulletPoints: [
-    "14K followers on X/Twitter",
-    "Created text-behind-image, a design tool with 300K users and #1 on Product Hunt",  
-    "Won international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online + more",   
+    "15K followers on X/Twitter",
+    "Created text-behind-image, a design tool with 300K users",  
+    "Winner of international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online + more",   
     "Senior @ Hong Kong International School", 
-    "Huge football fan (🇾🇪 #GGMU)"
   ],
   avatarUrl1: RexanWong,
   avatarUrl2: "https://avatars.githubusercontent.com/u/96183717?v=4",
