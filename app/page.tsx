@@ -26,7 +26,7 @@ const page = () => {
   }, []);
 
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16 font-normal">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16 font-normal tracking-tight">
       <section className="mx-auto w-full max-w-3xl space-y-8 print:space-y-6">
 
         <div className="flex items-center justify-between">
@@ -43,33 +43,7 @@ const page = () => {
                 {RESUME_DATA.location}
               </a>
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
-              {RESUME_DATA.contact.email ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`mailto:${RESUME_DATA.contact.email}`} target="_blank" rel="noopener noreferrer">
-                    <MailIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null}
-              {RESUME_DATA.contact.social.map((social) => (
-                <Button
-                  key={social.name}
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={social.url} target="_blank" rel="noopener noreferrer">
-                    <social.icon className="size-4" />
-                  </a>
-                </Button>
-              ))}
-            </div>
+            
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
                 <a href={`mailto:${RESUME_DATA.contact.email}`} target="_blank" rel="noopener noreferrer">
@@ -96,15 +70,51 @@ const page = () => {
         </div>
         <Section>
           {/* <h2 className="text-xl font-bold">About</h2> */}
-          <p className='font-semibold'>
+          <p className='text-sm font-semibold'>
             {RESUME_DATA.about}
           </p>
 
           <div className='mt-2'>
             {RESUME_DATA.aboutBulletPoints.map((item) => (
-                <p className='mb-1'>
-                    • {item}
+                <p className='text-sm mb-1'>
+                    {'>'} {item}
                 </p>
+            ))}
+          </div>
+          
+          <div className="flex flex-col gap-4 mt-6 w-full print:hidden">
+            {RESUME_DATA.contact.email ? (
+              <Card className="w-full">
+                <a href={`mailto:${RESUME_DATA.contact.email}`} className="flex items-center p-4" target="_blank" rel="noopener noreferrer">
+                  <MailIcon className="size-6 mr-4" />
+                  <div className="flex-1">
+                    <h3 className="font-semibold">Email</h3>
+                    <p className="text-sm text-muted-foreground">{RESUME_DATA.contact.email}</p>
+                  </div>
+                  <div className="ml-auto">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </a>
+              </Card>
+            ) : null}
+            
+            {RESUME_DATA.contact.social.map((social) => (
+              <Card key={social.name} className="w-full text-sm">
+                <a href={social.url} className="flex items-center p-4" target="_blank" rel="noopener noreferrer">
+                  <social.icon className="size-6 mr-4" />
+                  <div className="flex-1">
+                    <h3 className="font-semibold">{social.name}</h3>
+                    <p className="text-sm">{social.description}</p>
+                  </div>
+                  <div className="ml-auto">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </a>
+              </Card>
             ))}
           </div>
         </Section>
@@ -379,7 +389,7 @@ const page = () => {
           <h2 className="text-xl font-bold">Music</h2>
           {RESUME_DATA.music.map((award) => {
             return (
-              <Card key={award.awardName}>
+              <Card key={award.awardName} className='text-sm'>
                 <CardHeader>
                   <h3 className="font-semibold">{award.awardName}</h3>
                   <div className="text-sm text-gray-500">{award.year}</div>

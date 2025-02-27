@@ -20,30 +20,36 @@ export const RESUME_DATA = {
     email: null,
     social: [
       {
-        name: "X",
+        name: "X.com / Twitter",
         url: "https://twitter.com/rexan_wong",
         icon: XIcon,
+        description: "Documenting my journey on building apps and business"
       },
       {   
         name: "Instagram",
         url: "https://instagram.com/rexanwonger",
         icon: InstagramIcon,
+        description: "Just for fun"
       },
       {
         name: "YouTube",
         url: "https://www.youtube.com/@rexanwong/videos",
         icon: YouTubeIcon,
-      },
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/rexanwong/",
-        icon: LinkedInIcon,
+        description: "Long form content and startup vlogs"
       },
       {   
         name: "GitHub",
         url: "https://github.com/RexanWONG",
         icon: GitHubIcon,
+        description: "Code repositories for my hackathon projects & personal tools"
       },   
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/rexanwong/",
+        icon: LinkedInIcon,
+        description: "My résumé"
+      },
+      
     ],
   },
   skills: [
