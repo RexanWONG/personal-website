@@ -6,7 +6,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const instrumentSerif = Instrument_Serif({ 
+export const instrumentSerif = Instrument_Serif({ 
   weight: '400',
   style: ['normal', 'italic'],
   subsets: ['latin'],
