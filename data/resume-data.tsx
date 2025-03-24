@@ -1,6 +1,14 @@
 import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon, YouTubeIcon } from "@/components/icons";
 import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage, Bulletpen } from "@/public";
 
+type SocialItem = {
+  name: string;
+  url: string;
+  icon?: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+  iconEmoji?: string;
+  description: string;
+}
+
 export const RESUME_DATA = {
   name: "Rexan Wong",
   initials: "RW",
@@ -23,31 +31,42 @@ export const RESUME_DATA = {
         name: "X.com / Twitter",
         url: "https://twitter.com/rexan_wong",
         icon: XIcon,
+        iconEmoji: null,
         description: "Documenting my journey on building apps and business"
       },
       {   
         name: "Instagram",
         url: "https://instagram.com/rexanwonger",
         icon: InstagramIcon,
+        iconEmoji: null,
         description: "Just for fun"
       },
       {
         name: "YouTube",
         url: "https://www.youtube.com/@rexanwong/videos",
         icon: YouTubeIcon,
+        iconEmoji: null,
         description: "Long form content and startup vlogs"
       },
       {   
         name: "GitHub",
         url: "https://github.com/RexanWONG",
         icon: GitHubIcon,
+        iconEmoji: null,
         description: "Code repositories for my hackathon projects & personal tools"
       },   
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/rexanwong/",
         icon: LinkedInIcon,
+        iconEmoji: null,
         description: "My résumé"
+      },
+      {
+        name: "Build in Public Playbook",
+        url: "https://lapis-balaur-465.notion.site/How-I-use-X-to-grow-my-apps-to-300K-users-the-build-in-public-playbook-by-Rexan-Wong-1b077afe2be980b785bfd37a544c884d?pvs=74",
+        iconEmoji: "📙",
+        description: "How I use X to grow my apps to 300K+ users"
       },
       
     ],

@@ -200,7 +200,11 @@ const Page = () => {
             {RESUME_DATA.contact.social.map((social, index) => (
               <Card key={social.name} className="w-full text-sm">
                 <a href={social.url} className="flex items-center p-4" target="_blank" rel="noopener noreferrer">
-                  <social.icon className="size-6 mr-4" />
+                  {social.iconEmoji ? (
+                    <span className="text-2xl mr-4">{social.iconEmoji}</span>
+                  ) : (
+                    <social.icon className="size-6 mr-4" />
+                  )}
                   <div className="flex-1">
                     <h3 className="font-semibold">
                       <ScrambleIn 
