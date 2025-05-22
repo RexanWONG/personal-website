@@ -16,10 +16,11 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/HongKong",
   about: "I'm a 17 y/o high school student, entrepreneur, developer, & influencer from Hong Kong",
   aboutBulletPoints: [
-    "15K followers on X/Twitter",
-    "Created text-behind-image, a design tool with 300K users",  
-    "Winner of international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online + more",   
+    "17K followers on X/Twitter",
+    "Created text-behind-image, a design tool with 350K users",  
+    "Winner of international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online, and more",   
     "Senior @ Hong Kong International School", 
+    "Building & growing apps @ 24Labs"
   ],
   avatarUrl1: RexanWong,
   avatarUrl2: "https://avatars.githubusercontent.com/u/96183717?v=4",
