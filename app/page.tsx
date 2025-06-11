@@ -429,7 +429,7 @@ const Page = () => {
                     ))}
                   </span>
                 </CardContent>
-        
+                
                 <CardFooter>
                   <Button>
                     <a href={award.projectDetailsLink} target="_blank" rel="noopener noreferrer">
@@ -597,7 +597,7 @@ const Page = () => {
             );
           })}
         </Section>
-        <Section id='music'> 
+        {/* <Section id='music'> 
           <h2 className="text-xl font-bold">
             <ScrambleIn 
               ref={(el) => sectionHeadingRefs.current[4] = el}
@@ -620,7 +620,7 @@ const Page = () => {
               </Card>
             );
           })}
-        </Section>
+        </Section> */}
       </section>
 
       <CommandMenu
