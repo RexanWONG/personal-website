@@ -1,5 +1,5 @@
 import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon, YouTubeIcon } from "@/components/icons";
-import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage, Bulletpen } from "@/public";
+import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage, Bulletpen, TwentyFourLabs, MakeAd } from "@/public";
 
 type SocialItem = {
   name: string;
@@ -16,7 +16,7 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/HongKong",
   about: "I'm a 17 y/o high school student, entrepreneur, developer, & influencer from Hong Kong",
   aboutBulletPoints: [
-    "17K followers on X/Twitter",
+    "20K followers on X/Twitter",
     "Created text-behind-image, a design tool with 400K users",  
     "Winner of international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online, and more",   
     "Building & growing apps @ 24Labs"
@@ -97,8 +97,19 @@ export const RESUME_DATA = {
       logo: TextBehindImage,
       date: "Since September 2024",
       description: "Creating stunning text-behind-image designs are difficult and there's not many easy-to-use tools online that helps you do that. So I built my own free tool, in 3 hours with AI tools such as cursor.sh, that helps you create these stunning text-behind-image designs easily on your images. Since launching, the tool has got 300K users, 3 million views on X/Twitter, #1 Product of the Day on Product Hunt, and notable shoutouts from people like Ryan Hoover, the founder of Product Hunt.",
-      videoLink: "https://www.youtube.com/watch?v=5Oy23JO4qCI",
+      videoLink: "https://www.youtube.com/wa tch?v=5Oy23JO4qCI",
       projectDetailsLink: "https://textbehindimage.app",
+    },
+    {
+      name: 'make.ad',
+      link: 'https://make.ad',
+      badges: ["Startup", "Ad platform"],
+      title: "Create and manage ads for your business",
+      logo: MakeAd,
+      date: "Since June 2025",
+      description: "Creating ads for any business is expensive, time-consuming, and requires a lot of creativity.  So I built make.ad with 24Labs, an AI app that creates ads for you.  Upload a photo of your product and the app creates a stunning ad for you. Within a month of launching we've hit close to 5K users and $5K MRR, through growing and attacking multiple distribution channels.",
+      videoLink: "https://www.youtube.com/watch?v=i4MiDlKAbVo",
+      projectDetailsLink: "https://make.ad",
     },
     {
       name: 'Bulletpen (bulletpen.ai)',
@@ -204,10 +215,10 @@ export const RESUME_DATA = {
   education: [
     {
       school: "Hong Kong International School",
-      degree: "High school, currently a senior",
+      degree: "High school diploma",
       start: "2020",
       end: "2025",
-      activities: "I am a member of the Table Tennis Team and a leader of the Student Digital Leadership Team.  Academically, I have been in the honour roll every year at HKIS, given to students with a yearly GPA of 3.5-3.99.  I am also a teaching assistant for Advanced Computer Science Studio, the highest CS class in the school, helping the teacher prepare resources and provide help in class for students",
+      activities: "",
       logo: HKIS
     },
     {
@@ -215,11 +226,22 @@ export const RESUME_DATA = {
       degree: "Primary school",
       start: "2013",
       end: "2020",
-      activities: "Acheived academic honours with distinction for every year since grade 4 to grade 7, given to students with a yearly grade over 90%.",
+      activities: "",
       logo: CAIS
     }, 
   ],
   work: [
+    {
+      company: "24Labs",
+      link: "https://24labs.ai",
+      badges: ["Remote"],
+      title: "Portfolio founder",
+      logo: TwentyFourLabs,
+      start: "2025",
+      end: "Present",
+      description:
+        "Building and growing apps at 24Labs. Currently building make.ad",
+    },
     {
       company: "Thirdweb",
       link: "https://thirdweb.com",

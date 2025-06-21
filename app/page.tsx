@@ -446,6 +446,89 @@ const Page = () => {
               </Card>
             );
           })}
+        </Section> 
+        <Section id='work-experience'> 
+          <h2 className="text-xl font-bold">
+            <ScrambleIn 
+              ref={(el) => sectionHeadingRefs.current[3] = el}
+              text="Work Experience"
+              scrambleSpeed={30}
+              scrambledLetterCount={3}
+              autoStart={false}
+            />
+          </h2>
+          {RESUME_DATA.work.map((work, idx) => {
+            return (
+              <Card key={work.company} className="w-full mb-4">
+                <CardHeader>
+                  <div className="flex items-center gap-x-3">
+                    {work.logo && (
+                      <Image src={work.logo} alt={`${work.company} logo`} className="w-12 h-12 rounded-lg object-contain" />
+                    )}
+                    <div className="flex-grow">
+                      <div className="flex items-center justify-between gap-x-2 text-base">
+                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                          <a className="hover:underline" href={work.link} target="_blank" rel="noopener noreferrer">
+                            <ScrambleIn 
+                              ref={(el) => workRefs.current[`company-${idx}`] = el}
+                              text={work.company}
+                              scrambleSpeed={25}
+                              scrambledLetterCount={3}
+                              autoStart={false}
+                            />
+                          </a>
+                        </h3>
+                        <div className="text-sm tabular-nums text-gray-500">
+                          <ScrambleIn 
+                            ref={(el) => workRefs.current[`date-${idx}`] = el}
+                            text={`${work.start} - ${work.end}`}
+                            scrambleSpeed={25}
+                            scrambledLetterCount={3}
+                            autoStart={false}
+                          />
+                        </div>
+                      </div>
+                      <h4 className="font-mono text-sm leading-none max-w-[500px] mt-1">
+                        <ScrambleIn 
+                          ref={(el) => workRefs.current[`title-${idx}`] = el}
+                          text={work.title}
+                          scrambleSpeed={25}
+                          scrambledLetterCount={4}
+                          autoStart={false}
+                        />
+                      </h4>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2 text-xs">
+                  <ScrambleIn 
+                    ref={(el) => workRefs.current[`desc-${idx}`] = el}
+                    text={work.description}
+                    scrambleSpeed={20}
+                    scrambledLetterCount={5}
+                    autoStart={false}
+                  />
+                  {/* <span className="inline-flex gap-x-1 mt-4">
+                    {work.badges.map((badge, badgeIdx) => (
+                      <Badge
+                        variant="secondary"
+                        className="align-middle text-xxs"
+                        key={badge}
+                      >
+                        <ScrambleIn 
+                          ref={(el) => workRefs.current[`badge-${idx}-${badgeIdx}`] = el}
+                          text={badge}
+                          scrambleSpeed={20}
+                          scrambledLetterCount={2}
+                          autoStart={false}
+                        />
+                      </Badge>
+                    ))}
+                  </span> */}
+                </CardContent>
+              </Card>
+            );
+          })}
         </Section>
         <Section id='education'> 
           <h2 className="text-xl font-bold">
@@ -514,89 +597,7 @@ const Page = () => {
             );
           })}
         </Section>
-        <Section id='work-experience'> 
-          <h2 className="text-xl font-bold">
-            <ScrambleIn 
-              ref={(el) => sectionHeadingRefs.current[3] = el}
-              text="Work Experience"
-              scrambleSpeed={30}
-              scrambledLetterCount={3}
-              autoStart={false}
-            />
-          </h2>
-          {RESUME_DATA.work.map((work, idx) => {
-            return (
-              <Card key={work.company} className="w-full mb-4">
-                <CardHeader>
-                  <div className="flex items-center gap-x-3">
-                    {work.logo && (
-                      <Image src={work.logo} alt={`${work.company} logo`} className="w-12 h-12 rounded-lg object-contain" />
-                    )}
-                    <div className="flex-grow">
-                      <div className="flex items-center justify-between gap-x-2 text-base">
-                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                          <a className="hover:underline" href={work.link} target="_blank" rel="noopener noreferrer">
-                            <ScrambleIn 
-                              ref={(el) => workRefs.current[`company-${idx}`] = el}
-                              text={work.company}
-                              scrambleSpeed={25}
-                              scrambledLetterCount={3}
-                              autoStart={false}
-                            />
-                          </a>
-                        </h3>
-                        <div className="text-sm tabular-nums text-gray-500">
-                          <ScrambleIn 
-                            ref={(el) => workRefs.current[`date-${idx}`] = el}
-                            text={`${work.start} - ${work.end}`}
-                            scrambleSpeed={25}
-                            scrambledLetterCount={3}
-                            autoStart={false}
-                          />
-                        </div>
-                      </div>
-                      <h4 className="font-mono text-sm leading-none max-w-[500px] mt-1">
-                        <ScrambleIn 
-                          ref={(el) => workRefs.current[`title-${idx}`] = el}
-                          text={work.title}
-                          scrambleSpeed={25}
-                          scrambledLetterCount={4}
-                          autoStart={false}
-                        />
-                      </h4>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  <ScrambleIn 
-                    ref={(el) => workRefs.current[`desc-${idx}`] = el}
-                    text={work.description}
-                    scrambleSpeed={20}
-                    scrambledLetterCount={5}
-                    autoStart={false}
-                  />
-                  <span className="inline-flex gap-x-1 mt-4">
-                    {work.badges.map((badge, badgeIdx) => (
-                      <Badge
-                        variant="secondary"
-                        className="align-middle text-xxs"
-                        key={badge}
-                      >
-                        <ScrambleIn 
-                          ref={(el) => workRefs.current[`badge-${idx}-${badgeIdx}`] = el}
-                          text={badge}
-                          scrambleSpeed={20}
-                          scrambledLetterCount={2}
-                          autoStart={false}
-                        />
-                      </Badge>
-                    ))}
-                  </span>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Section>
+       
         {/* <Section id='music'> 
           <h2 className="text-xl font-bold">
             <ScrambleIn 

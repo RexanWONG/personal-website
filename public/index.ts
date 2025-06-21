@@ -14,6 +14,8 @@ import CAIS from './cais.png'
 import VideoFast from './videofast.png'
 import TextBehindImage from './textbehindimage.png'
 import Bulletpen from './bulletpen.png'
+import TwentyFourLabs from './24labs.png'
+import MakeAd from './makead.png'
 
 export {    
     RexanWong,
@@ -31,5 +33,7 @@ export {
     CAIS,
     VideoFast,
     TextBehindImage,
-    Bulletpen
+    Bulletpen,
+    TwentyFourLabs,
+    MakeAd
 }
