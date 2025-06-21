@@ -17,9 +17,8 @@ export const RESUME_DATA = {
   about: "I'm a 17 y/o high school student, entrepreneur, developer, & influencer from Hong Kong",
   aboutBulletPoints: [
     "17K followers on X/Twitter",
-    "Created text-behind-image, a design tool with 350K users",  
+    "Created text-behind-image, a design tool with 400K users",  
     "Winner of international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online, and more",   
-    "Senior @ Hong Kong International School", 
     "Building & growing apps @ 24Labs"
   ],
   avatarUrl1: RexanWong,
