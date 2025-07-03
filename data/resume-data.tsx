@@ -14,7 +14,7 @@ export const RESUME_DATA = {
   initials: "RW",
   location: "Hong Kong, HKT",    
   locationLink: "https://www.google.com/maps/place/HongKong",
-  about: "I'm a 17 y/o, entrepreneur, developer, & influencer from Hong Kong",
+  about: "I'm a 17 y/o entrepreneur, developer, & influencer from Hong Kong",
   aboutBulletPoints: [
     "I build and grow apps (400K+ users)",
     "20K followers on X/Twitter",
