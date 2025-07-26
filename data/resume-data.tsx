@@ -1,24 +1,16 @@
 import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon, YouTubeIcon } from "@/components/icons";
-import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage, Bulletpen, TwentyFourLabs, MakeAd } from "@/public";
-
-type SocialItem = {
-  name: string;
-  url: string;
-  icon?: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
-  iconEmoji?: string;
-  description: string;
-}
+import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage, Bulletpen, TwentyFourLabs, MakeAd, Brandthetics } from "@/public";
 
 export const RESUME_DATA = {
   name: "Rexan Wong",
   initials: "RW",
   location: "Hong Kong, HKT",    
   locationLink: "https://www.google.com/maps/place/HongKong",
-  about: "I'm a 17 y/o entrepreneur, developer, & influencer from Hong Kong",
+  about: "I'm a 17 y/o entrepreneur, developer, & influencer from Hong Kong 🇭🇰",
   aboutBulletPoints: [
     "I build and grow apps (400K+ users)",
     "20K followers on X/Twitter",
-    "Winner of international hackathons, eg. Apple Swift Student Challenge, ETHGlobal Online, and more",   
+    "5x international hackathon winner",   
     "Portfolio founder @ 24Labs"
   ],
   avatarUrl1: RexanWong,
@@ -29,6 +21,7 @@ export const RESUME_DATA = {
     social: [
       {
         name: "X.com / Twitter",
+        handle: "@rexan_wong",
         url: "https://twitter.com/rexan_wong",
         icon: XIcon,
         iconEmoji: null,
@@ -36,6 +29,7 @@ export const RESUME_DATA = {
       },
       {   
         name: "Instagram",
+        handle: "@rexanwonger",
         url: "https://instagram.com/rexanwonger",
         icon: InstagramIcon,
         iconEmoji: null,
@@ -43,6 +37,7 @@ export const RESUME_DATA = {
       },
       {
         name: "YouTube",
+        handle: "@rexanwong",
         url: "https://www.youtube.com/@rexanwong/videos",
         icon: YouTubeIcon,
         iconEmoji: null,
@@ -50,6 +45,7 @@ export const RESUME_DATA = {
       },
       {   
         name: "GitHub",
+        handle: null,
         url: "https://github.com/RexanWONG",
         icon: GitHubIcon,
         iconEmoji: null,
@@ -57,6 +53,7 @@ export const RESUME_DATA = {
       },   
       {
         name: "LinkedIn",
+        handle: null,
         url: "https://www.linkedin.com/in/rexanwong/",
         icon: LinkedInIcon,
         iconEmoji: null,
@@ -64,6 +61,7 @@ export const RESUME_DATA = {
       },
       {
         name: "Build in Public Playbook",
+        handle: null,
         url: "https://lapis-balaur-465.notion.site/How-I-use-X-to-grow-my-apps-to-300K-users-the-build-in-public-playbook-by-Rexan-Wong-1b077afe2be980b785bfd37a544c884d?pvs=74",
         iconEmoji: "📙",
         description: "How I use X to grow my apps to 300K+ users"
@@ -90,15 +88,16 @@ export const RESUME_DATA = {
   ],
   currentlyBuilding: [
     {
-      name: 'Text Behind Image',
-      link: 'https://textbehindimage.app',
-      badges: ["Startup", "Design tool"],
-      title: "Create text-behind-image designs easily",
-      logo: TextBehindImage,
-      date: "Since September 2024",
-      description: "Creating stunning text-behind-image designs are difficult and there's not many easy-to-use tools online that helps you do that. So I built my own free tool, in 3 hours with AI tools such as cursor.sh, that helps you create these stunning text-behind-image designs easily on your images. Since launching, the tool has got 300K users, 3 million views on X/Twitter, #1 Product of the Day on Product Hunt, and notable shoutouts from people like Ryan Hoover, the founder of Product Hunt.",
-      videoLink: "https://www.youtube.com/wa tch?v=5Oy23JO4qCI",
-      projectDetailsLink: "https://textbehindimage.app",
+      name: 'brandthetics.com',
+      link: 'https://brandthetics.co',
+      badges: ["Startup", "Branding tool", "Short form content"],
+      title: "Create and manage branding for your business",
+      logo: Brandthetics,
+      date: "Since June 2025",
+      year: "2025",
+      description: "Creating high quality cinematic short form content for short form platforms is tedious and requires a lot of creativity. Brandthetics is an app that allows you to easily create high quality cinematic short form content for your business or brand. Inspired by @bymaximise style videos.",
+      videoLink: "https://youtu.be/nGJ4lNJyYms",
+      projectDetailsLink: "https://brandthetics.com",
     },
     {
       name: 'make.ad',
@@ -107,28 +106,43 @@ export const RESUME_DATA = {
       title: "Create and manage ads for your business",
       logo: MakeAd,
       date: "Since June 2025",
+      year: "2025",
       description: "Creating ads for any business is expensive, time-consuming, and requires a lot of creativity.  So I built make.ad with 24Labs, an AI app that creates ads for you.  Upload a photo of your product and the app creates a stunning ad for you. Within a month of launching we've hit close to 5K users and $5K MRR, through growing and attacking multiple distribution channels.",
       videoLink: "https://www.youtube.com/watch?v=i4MiDlKAbVo",
       projectDetailsLink: "https://make.ad",
     },
     {
-      name: 'Bulletpen (bulletpen.ai)',
+      name: 'bulletpen.ai',
       link: 'https://bulletpen.ai',
       badges: ["Startup","Writing tool"],
       title: "Write great essays while you yap",
       logo: Bulletpen,
       date: "Since December 2024",
+      year: "2025",
       description: "Writing is hard, and turning your ideas and thoughts into polished content is even harder. Most writing tools are either too basic or too complex, and none of them help you actually improve your writing in real-time. So I built Bulletpen, an AI app that transforms your spoken thoughts into well-structured, polished writing in real time. Since launching, it's grown to 2K active users and reached $1K MRR.",
       videoLink: "https://youtu.be/9MLg6TZolpc",
       projectDetailsLink: "https://bulletpen.ai",
     },
     {
-      name: 'VideoFast (videofast.gg)',
+      name: 'textbehindimage.app',
+      link: 'https://textbehindimage.app',
+      badges: ["Startup", "Design tool"],
+      title: "Create text-behind-image designs easily",
+      logo: TextBehindImage,
+      date: "Since September 2024",
+      year: "2024",
+      description: "Creating stunning text-behind-image designs are difficult and there's not many easy-to-use tools online that helps you do that. So I built my own free tool, in 3 hours with AI tools such as cursor.sh, that helps you create these stunning text-behind-image designs easily on your images. Since launching, the tool has got 300K users, 3 million views on X/Twitter, #1 Product of the Day on Product Hunt, and notable shoutouts from people like Ryan Hoover, the founder of Product Hunt.",
+      videoLink: "https://www.youtube.com/watch?v=5Oy23JO4qCI",
+      projectDetailsLink: "https://textbehindimage.app",
+    },
+    {
+      name: 'videofast.gg',
       link: 'https://videofast.gg',
       badges: ["Startup", "Remotion", "Video editing tool"],
       title: "A super easy to use online video editor",
       logo: VideoFast,
       date: "Since Janurary 2024",
+      year: "2024",
       description: "I've started building VideoFast since the beginning of 2024, while working on schoolwork at the same time.  From iterating and constantly improving the design and the usability of the video editor, it has evolved into the easiest video editor that you will ever use.  Currently, VideoFast has got the #2 Product of the Day on Product Hunt and has over 500 regular users using the editor.",
       videoLink: "https://www.youtube.com/watch?v=b1WPCgIV_0I&t=6s",
       projectDetailsLink: "https://videofast.gg",
@@ -142,6 +156,7 @@ export const RESUME_DATA = {
       title: "Gold medalist award",
       logo: Olympiad,
       date: "8/2024",
+      year: "2024",
       description: "The HKBCOL is a blockchain solution design competition where teams from all secondary schools from Hong Kong compete to pitch and present their blockchain solution to industry leading judges. I was awarded the gold medal (first place) for my project Proof of Workout Protocol and selected to represent Hong Kong at the International Blockchain Olympiad in the Netherlands.",
       videoLink: "https://www.youtube.com/watch?v=OYj3Vru7Y4g",
       projectDetailsLink: "https://github.com/rexanwong/proof-of-workout-protocol",
@@ -153,6 +168,7 @@ export const RESUME_DATA = {
       title: "Top 10 Finalistis (Winning team) + Mantle Best UX Award",
       logo: EthGlobalLogo,
       date: "10/2023",
+      year: "2023",
       description: "ETHOnline is a three week long online hackathon with over $200,000 USD in prizes as well as a series of curated summits, celebrating some of the most significant happenings & learnings from the past 12 months in web3.  The hackathon is focused on building Ethereum based applications with different bounties' tools and technologies.  I built Koinu, an npm library that allows developers to include a cross chain experience within their dapps.  This project was selected as a finalist project, along with 9 other finalist projects, out of 500 projects.  Being the only under-18 to win the competition, and competiting against the best and most hardcore developers in the Web3 space, out of 515 projects, I learnt a lot more about Web3 and blockchain development during the course of the hackathon and it encouraged me to build blockchain applications more : the fact that I could compete, as a 15 year old, at the time, against the top developers of the Web3 space, and win, I am looking forward to build more applications for everyday users of Web3",
       videoLink: " https://www.youtube.com/watch?v=uNC-Auuz1T4",
       projectDetailsLink: "https://ethglobal.com/showcase/koinu-x8ced",
@@ -164,6 +180,7 @@ export const RESUME_DATA = {
       title: "Winner of the IYKYK Linea Edition",
       logo: Cosensys,
       date: "9/2023",
+      year: "2023",
       description: "Consensys, one of the biggest blockchain companies, hosted NAVH: Not Another Virtual Hackathon beginning July 6th, 2023, for technical and non-technical builders to bring their skills to the table. Builders from anywhere in the world can join to compete for over $115,500 in bounties, using Cosensys products to build something.  I built Proof of Workout Protocol : a dApp on Linea (a blockchain developed by leading blockchain company Cosensys) designed to motivate and reward physical fitness through a gamified system of quests and token-based incentive.  ",
       videoLink: "https://www.youtube.com/watch?v=OYj3Vru7Y4g",
       projectDetailsLink: "https://github.com/rexanwong/proof-of-workout-protocol",
@@ -175,6 +192,7 @@ export const RESUME_DATA = {
       title: "1st Place",
       logo: DeveloperDao,
       date: "6/2023",
+      year: "2023",
       description: "Developer DAO, the biggest Web3 Developer Organisation, and Mina Protocol, a zero knowledge based blockchain with a market cap of $800 million USD, ran a week-long, remote hackathon with ~ $10,000 in prizes to be won in USDC, Mina Token and CODE.  The hackathon is focused on building zero-knowledge applications on Mina Protocol with SnarkyJS.   I built a privacy-focused decentralized zkApp that aims to enable anonymous and secure protests where participants can join and support various causes while preserving their privacy.  This hackathon was the most hardcore hackathon I've participated in : joining the hackathon, knowing very little about zero-knowledge (zk) technology, let alone building zk technology.  Throughout the process, I had to dive deep and learn all these new concepts while building my zkApp.  In the end, my project won first place in the hackathon, out of 40 other projects, and this victory provoked me to go further deeper into this tough concept of zero knowledge technology.",
       videoLink: "https://www.youtube.com/watch?v=UkD0pTwgjBg&t=481s", 
       projectDetailsLink: "https://github.com/rexanwong/zk-protest",
@@ -186,6 +204,7 @@ export const RESUME_DATA = {
       title: "Best Use of Metamask SDK",
       logo: EthGlobalLogo,
       date: "6/2023",
+      year: "2023",
       description: "ETHGlobal Waterloo is a 24hr long In person hackathon at Waterloo, CA, with over $200,000 USD in prizes as well as a series of curated summits, celebrating some of the most significant happenings & learnings from the past 12 months in web3.  The hackathon is focused on building Ethereum based applications with different bounties' tools and technologies.  The entire hackathon was an amazing learning process to me, especially for learning more about blockchain development - throughout the entire hackathon, I had many chances to talk face to face with top leaders and developers in the Web3 space - all these people, all the other teams, together in one big room in the town of Waterloo, building and sharing a passion together.  An even bigger impact personally was being able to travel all the way from where I live, Hong Kong, all the way to Waterloo, Ontario, Canada, and hack along with two University of Waterloo students, herby gaining exposure to university life and working as a development team.  We built a Video-sharing platform powered by ERC-6551 tokenbound-accounts, empowering the content creator economy through advertisers' staking in smart contracts.",
       videoLink: null, 
       projectDetailsLink: "https://ethglobal.com/showcase/videre-wk314",
@@ -197,6 +216,7 @@ export const RESUME_DATA = {
       title: "WWDC23 Scholar",
       logo: Apple,
       date: "Q2 2023",
+      year: "2023",
       description: "The Swift Student Challenge at WWDC (Worldwide Developers Conference) is an annual competition organized by Apple to celebrate the ingenuity and expertise of student developers using Swift.  Apple picks around 300 applications out of a pool of more than 10,000+ applicants to win, and I was one of the 300 applicants to win the challenge.   I built an iOS app/game that challenges users to find an image of a random word generated by the app in their photo album, then used machine learning models to verify that the image being selected matches the random word.",
       videoLink: null, 
       projectDetailsLink: "https://github.com/rexanwong/photorush",
@@ -216,17 +236,17 @@ export const RESUME_DATA = {
     {
       school: "Hong Kong International School",
       degree: "High school diploma",
+      oneLiner: "High School @ Hong Kong International School",
       start: "2020",
       end: "2025",
-      activities: "",
       logo: HKIS
     },
     {
       school: "Christian Alliance International School",
       degree: "Primary school",
+      oneLiner: "Primary school @ Christian Alliance International School",
       start: "2013",
       end: "2020",
-      activities: "",
       logo: CAIS
     }, 
   ],
@@ -239,17 +259,21 @@ export const RESUME_DATA = {
       logo: TwentyFourLabs,
       start: "2025",
       end: "Present",
+      year: "2025",
+      oneLiner: "Portfolio founder @ 24Labs",
       description:
         "Building and growing apps at 24Labs. Currently building make.ad",
     },
     {
       company: "Thirdweb",
-      link: "https://thirdweb.com",
+      link: "https://thirdweb.com", 
       badges: ["Remote"],
       title: "Thirdweb Ambassador",
       logo: ThirdwebLogo,
       start: "2023",
       end: "Present",
+      year: "2023",
+      oneLiner: "Ambassador @ Thirdweb",
       description:
         "A Thirdweb Ambassador is someone that Thirdweb, the leading blockchain infrastrcure company, has selected to be ambassadors for Thirdweb.  As a Thirdweb ambassador, I share knowledge on new groundbreaking web3 tools, represent Thirdweb in networking events, create content for Thirdweb, and get rewarded with benefits exclusive to ambassadors",
     },
@@ -261,6 +285,8 @@ export const RESUME_DATA = {
       logo: CityUniversityLogo, 
       start: "5/2023",
       end: "12/2023",
+      year: "2023",
+      oneLiner: "Lecturer @ City University of Hong Kong's Gifted Education Programme on Cryptography, Blockchain, and Fintech",
       description:
         "The Coding, Cryptography and FinTech (CCF) Skills Education for Gifted Students programm is a programm aimed for the most gifted high school students around Hong Kong, teaching them about coding, cryptography, and fintech.  As a speaker and a mentor, I hosted workshops and lectures for the program to teach the students about these topics",
     },
@@ -272,6 +298,8 @@ export const RESUME_DATA = {
       logo: IEEELogo,
       start: "7/2022",
       end: "8/2022",
+      year: "2022",
+      oneLiner: "Technical member @ IEEE HK Blockchain Local Group",
       description:
         "The IEEE Hong Kong Blockchain Local Group is the official blockchain group for Hong Kong under the Institute of Electrical and Electronics Engineers (IEEE)'s Hong Kong Section.   The IEEE HK Blockchain Local Group hosted a Web3 hackathon, targeted towards university students, to build Web3 applications and compete for prizes up to $100K HKD.  Over 100 teams joined, from 5 different universities across Hong Kong.  As a mentor, I was in charge of giving guidances and tips to the teams participating about the hackathon, as well as host mini workshops and create technical Youtube tutorials about blockchain development.  In addition, as a volunteer, I was in charge of setting up the venue and more, ensuring that the hackathon day in person was a smooth experience, as well as build the website for the hackathon",
     },
@@ -283,6 +311,8 @@ export const RESUME_DATA = {
       logo: Arta,
       start: "7/2022",
       end: "8/2022",
+      year: "2022",
+      oneLiner: "Intern @ Arta Tech Fin",
       description:
         "During the summer of 2022, I interned at Arta Tech Fin as a blockchain research intern. My responsibilities included conducting research on blockchain technologies and their potential applications in the financial industry.  At Arta Tech Fin, I had the chance to work with experienced professionals in the financial industry and learn about the latest trends and developments in blockchain technology. I gained valuable insights into how blockchain can be used to solve problems and improve processes in the financial sector, and was able to contribute to the company's research efforts.",
     },
@@ -294,6 +324,8 @@ export const RESUME_DATA = {
       logo: Cryptoblk,
       start: "6/2022",
       end: "8/2022",
+      year: "2022",
+      oneLiner: "Intern @ Cryptoblk",
       description:
         "At Cryptoblk, I had the opportunity to work with a talented team of developers and learn about the latest technologies and trends in the blockchain industry. I gained valuable experience in smart contract development and blockchain application development, and was able to contribute to a variety of projects that helped to improve the company's products and services.  I also worked with the business development team and IEEE HK Blockchain to host the Web3 Dev Hackathon 2022",
     },

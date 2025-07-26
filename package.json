@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -20,7 +21,8 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^0.2.0",
-    "lucide-react": "^0.314.0",
+    "lucide-react": "^0.525.0",
+    "motion": "^12.23.9",
     "next": "14.1.0",
     "next-themes": "^0.3.0",
     "react": "^18",

@@ -16,6 +16,7 @@ import TextBehindImage from './textbehindimage.png'
 import Bulletpen from './bulletpen.png'
 import TwentyFourLabs from './24labs.png'
 import MakeAd from './makead.png'
+import Brandthetics from './brandthetics.png'
 
 export {    
     RexanWong,
@@ -35,5 +36,6 @@ export {
     TextBehindImage,
     Bulletpen,
     TwentyFourLabs,
-    MakeAd
+    MakeAd,
+    Brandthetics
 }

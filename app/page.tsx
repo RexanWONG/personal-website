@@ -1,22 +1,20 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image';
 import '@vidstack/react/player/styles/base.css';
 import '@vidstack/react/player/styles/plyr/theme.css';
 import { MediaPlayer, MediaProvider } from '@vidstack/react';
 import { PlyrLayout, plyrLayoutIcons } from '@vidstack/react/player/layouts/plyr';
-import { GlobeIcon, MailIcon } from "lucide-react";
-import { Button } from '@/components/ui/button';
+import { GlobeIcon, MailIcon, ChevronDown, SquareArrowOutUpRight } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Section } from '@/components/ui/section';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 
 import { RESUME_DATA } from "@/data/resume-data";
-import { CommandMenu } from '@/components/command-menu';
 import { RexanWong } from '@/public';
-import ScrambleIn, { ScrambleInHandle } from '@/fancy/components/text/scramble-in';
+import ScrambleIn, { ScrambleInHandle } from '@/components/fancy/components/text/scramble-in';
+import ScrambleHover from '@/components/fancy/components/text/scramble-hover';
 
 const Page = () => {
   // Create refs for each section that will have the scramble effect
@@ -35,6 +33,52 @@ const Page = () => {
   
   // Animation has been triggered flag
   const animationTriggered = useRef(false);
+  
+  // State for tracking expanded portfolio items
+  const [expandedPortfolioItems, setExpandedPortfolioItems] = useState<Set<string>>(new Set());
+  const [expandedAwardItems, setExpandedAwardItems] = useState<Set<string>>(new Set());
+  const [expandedWorkItems, setExpandedWorkItems] = useState<Set<string>>(new Set());
+  
+  // State for tracking ScrambleIn completion
+  const [portfolioScrambleComplete, setPortfolioScrambleComplete] = useState<Set<string>>(new Set());
+  const [awardScrambleComplete, setAwardScrambleComplete] = useState<Set<string>>(new Set());
+  const [workScrambleComplete, setWorkScrambleComplete] = useState<Set<string>>(new Set());
+  
+  const togglePortfolioItem = (itemName: string) => {
+    setExpandedPortfolioItems(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(itemName)) {
+        newSet.delete(itemName);
+      } else {
+        newSet.add(itemName);
+      }
+      return newSet;
+    });
+  };
+
+  const toggleAwardItem = (itemName: string) => {
+    setExpandedAwardItems(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(itemName)) {
+        newSet.delete(itemName);
+      } else {
+        newSet.add(itemName);
+      }
+      return newSet;
+    });
+  };
+
+  const toggleWorkItem = (itemName: string) => {
+    setExpandedWorkItems(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(itemName)) {
+        newSet.delete(itemName);
+      } else {
+        newSet.add(itemName);
+      }
+      return newSet;
+    });
+  };
   
   const triggerAnimations = () => {
     if (animationTriggered.current) return;
@@ -64,6 +108,30 @@ const Page = () => {
     // Start all animations with a small initial delay
     setTimeout(startAllRefs, 300);
   };
+
+  const handlePortfolioScrambleComplete = (itemName: string) => {
+    setPortfolioScrambleComplete(prev => {
+      const newSet = new Set(prev);
+      newSet.add(itemName);
+      return newSet;
+    });
+  };
+
+  const handleAwardScrambleComplete = (itemName: string) => {
+    setAwardScrambleComplete(prev => {
+      const newSet = new Set(prev);
+      newSet.add(itemName);
+      return newSet;
+    });
+  };
+
+  const handleWorkScrambleComplete = (itemName: string) => {
+    setWorkScrambleComplete(prev => {
+      const newSet = new Set(prev);
+      newSet.add(itemName);
+      return newSet;
+    });
+  };
   
   useEffect(() => {
     const script = document.createElement('script');
@@ -82,12 +150,12 @@ const Page = () => {
   }, []);
 
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16 font-normal tracking-tight">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16 font-normal tracking-tight lowercase">
       <section className="mx-auto w-full max-w-3xl space-y-8 print:space-y-6">
 
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className='text-2xl font-bold'>
+            <h1 className='text-4xl md:text-5xl font-extrabold lowercase tracking-tight'>
               <ScrambleIn 
                 ref={nameRef}
                 text={RESUME_DATA.name}
@@ -119,7 +187,7 @@ const Page = () => {
                 <a href={`mailto:${RESUME_DATA.contact.email}`} target="_blank" rel="noopener noreferrer">
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
-              ) : null}
+              ) : null} 
             </div>
           </div>
           <div className="relative group">
@@ -139,7 +207,7 @@ const Page = () => {
           </div>
         </div>
         <Section>
-          <p className='text-sm font-semibold'>
+          <p className='text-lg md:text-xl font-semibold'>
             <ScrambleIn 
               ref={aboutRef}
               text={RESUME_DATA.about}
@@ -151,8 +219,8 @@ const Page = () => {
 
           <div className='mt-2'>
             {RESUME_DATA.aboutBulletPoints.map((item, index) => (
-              <p className='text-sm mb-1' key={index}>
-                {'>'} <ScrambleIn 
+              <p className='text-[16px] md:text-lg mb-1' key={index}>
+                {'-'} <ScrambleIn 
                   ref={(el) => aboutBulletRefs.current[index] = el}
                   text={item}
                   scrambleSpeed={25}
@@ -163,7 +231,7 @@ const Page = () => {
             ))}
           </div>
           
-          <div className="flex flex-col gap-4 mt-6 w-full print:hidden">
+          <div className="flex flex-col gap-4 mt-3 w-full print:hidden">
             {RESUME_DATA.contact.email ? (
               <Card className="w-full">
                 <a href={`mailto:${RESUME_DATA.contact.email}`} className="flex items-center p-4" target="_blank" rel="noopener noreferrer">
@@ -197,344 +265,278 @@ const Page = () => {
               </Card>
             ) : null}
             
-            {RESUME_DATA.contact.social.map((social, index) => (
-              <Card key={social.name} className="w-full text-sm">
-                <a href={social.url} className="flex items-center p-4" target="_blank" rel="noopener noreferrer">
-                  {social.iconEmoji ? (
-                    <span className="text-2xl mr-4">{social.iconEmoji}</span>
-                  ) : (
-                    <social.icon className="size-6 mr-4" />
-                  )}
-                  <div className="flex-1">
-                    <h3 className="font-semibold">
-                      <ScrambleIn 
-                        ref={(el) => socialRefs.current[`social-name-${index}`] = el}
-                        text={social.name}
-                        scrambleSpeed={25}
-                        scrambledLetterCount={3}
-                        autoStart={false}
-                      />
-                    </h3>
-                    <p className="text-sm">
-                      <ScrambleIn 
-                        ref={(el) => socialRefs.current[`social-desc-${index}`] = el}
-                        text={social.description}
-                        scrambleSpeed={25}
-                        scrambledLetterCount={4}
-                        autoStart={false}
-                      />
-                    </p>
-                  </div>
-                  <div className="ml-auto">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                </a>
-              </Card>
-            ))}
+            <div className='flex flex-row flex-wrap items-start justify-start gap-2 max-w-full'>
+              {RESUME_DATA.contact.social.map((social, index) => (
+                <Card key={social.name} className="w-fit text-sm min-w-0 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] border border-gray-100 bg-white/80 backdrop-blur-sm">
+                  <a href={social.url} className="flex items-center justify-center p-3 group" target="_blank" rel="noopener noreferrer">
+                    {social.iconEmoji ? (
+                      <span className="text-[20px] flex-shrink-0 group-hover:scale-110 transition-transform duration-200">{social.iconEmoji}</span>
+                    ) : (
+                      <social.icon className="size-[20px] flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
+                    )}
+                    <div className="flex-1 text-left min-w-0">
+                      <h3 className='font-semibold'>
+                        {social.handle && (
+                          <ScrambleIn 
+                            ref={(el) => socialRefs.current[`social-name-${index}`] = el}
+                            text={social.handle}
+                            scrambleSpeed={25}
+                            scrambledLetterCount={3}
+                            autoStart={false}
+                            className='ml-2 group-hover:text-gray-700 transition-colors duration-200'
+                          />
+                        )}
+                      </h3>
+                    </div>
+                  </a>
+                </Card>
+              ))}
+            </div>
           </div>
         </Section>
+
         <Section id='currentlyBuilding'> 
-          <h2 className="text-xl font-bold">
+          <h2 className="text-3xl font-bold tracking-tight">
             <ScrambleIn 
               ref={(el) => sectionHeadingRefs.current[0] = el}
-              text="Currently building"
+              text="🥷"
               scrambleSpeed={30}
               scrambledLetterCount={3}
               autoStart={false}
             />
           </h2>
           {RESUME_DATA.currentlyBuilding.map((currentlyBuilding, idx) => {
+            const isExpanded = expandedPortfolioItems.has(currentlyBuilding.name);
             return (
-              <Card key={currentlyBuilding.name}>
-                <CardHeader>
-                  <div className="flex items-center gap-x-3">
+              <div key={currentlyBuilding.name}>
+                <div className='flex flex-row w-full items-center justify-between'>
+                  {/* Main clickable area for external link */}
+                  <a
+                    href={currentlyBuilding.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-1 items-center border-b-2 border-transparent hover:border-[#f0ecec] group"
+                  >
                     {currentlyBuilding.logo && (
-                      <Image src={currentlyBuilding.logo} alt={`${currentlyBuilding.name} logo`} className="w-10 h-10 rounded-lg object-contain" />
+                        <Image src={currentlyBuilding.logo} alt={`${currentlyBuilding.name} logo`} className="w-7 h-7 rounded-lg object-contain mr-2" />
                     )}
-                    <div className='flex-grow'>
-                      <div className="flex items-center justify-between gap-x-2 text-base">
-                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                          <a className="hover:underline max-w-[300px]" href={currentlyBuilding.link} target="_blank" rel="noopener noreferrer">
+                    <div className="flex w-full items-center justify-between mr-2.5">
+                      <div className="flex items-center gap-2">
+                        <h1 className='text-[16px] md:text-xl'>
+                          {portfolioScrambleComplete.has(currentlyBuilding.name) ? (
+                            <ScrambleHover
+                              text={currentlyBuilding.name}
+                              scrambleSpeed={25}
+                              maxIterations={20}
+                            />
+                          ) : (
                             <ScrambleIn 
                               ref={(el) => currentlyBuildingRefs.current[`name-${idx}`] = el}
                               text={currentlyBuilding.name}
                               scrambleSpeed={25}
                               scrambledLetterCount={3}
                               autoStart={false}
+                              onComplete={() => handlePortfolioScrambleComplete(currentlyBuilding.name)}
                             />
-                          </a>
-                        </h3>
-                        <div className="text-sm tabular-nums text-gray-500">
-                          <ScrambleIn 
-                            ref={(el) => currentlyBuildingRefs.current[`date-${idx}`] = el}
-                            text={currentlyBuilding.date}
-                            scrambleSpeed={25}
-                            scrambledLetterCount={3}
-                            autoStart={false}
-                          />
-                        </div>
+                          )}
+                        </h1>
                       </div>
-
-                      <h4 className="font-mono text-sm leading-none max-w-[500px]">
-                        <ScrambleIn 
-                          ref={(el) => currentlyBuildingRefs.current[`title-${idx}`] = el}
-                          text={currentlyBuilding.title}
-                          scrambleSpeed={25}
-                          scrambledLetterCount={4}
-                          autoStart={false}
+                      <div className='flex flex-row items-center gap-4'>
+                        <SquareArrowOutUpRight 
+                          strokeWidth={1.3}
+                          className="w-6 h-6 opacity-0 group-hover:opacity-100" 
                         />
-                      </h4>
+                        <span className="text-[16px] md:text-xl">
+                          {currentlyBuilding.year}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex flex-col mt-2 gap-4">
-                  <p className='text-xs'>
-                    <ScrambleIn 
-                      ref={(el) => currentlyBuildingRefs.current[`desc-${idx}`] = el}
-                      text={currentlyBuilding.description}
-                      scrambleSpeed={20}
-                      scrambledLetterCount={5}
-                      autoStart={false}
+                  </a>
+                  
+                  {/* Separate clickable area for accordion toggle */}
+                  <button
+                    className="hover:bg-gray-50 rounded"
+                    onClick={() => togglePortfolioItem(currentlyBuilding.name)}
+                  >
+                    <ChevronDown
+                      strokeWidth={1}
+                      className={`h-8 w-8 transition-transform duration-200 ${
+                        isExpanded ? 'rotate-180' : ''
+                      }`}
                     />
-                  </p>
-                  {currentlyBuilding.videoLink && (
-                    <MediaPlayer title={currentlyBuilding.name} src={currentlyBuilding.videoLink}>
-                      <MediaProvider />
-                      <PlyrLayout icons={plyrLayoutIcons}/>
-                    </MediaPlayer>
-                  )}
-                  <span className="inline-flex gap-x-1">
-                    {currentlyBuilding.badges.map((badge, badgeIdx) => (
-                      <Badge
-                        variant="secondary"
-                        className="align-middle text-xxs"
-                        key={badge}
-                      >
-                        <ScrambleIn 
-                          ref={(el) => currentlyBuildingRefs.current[`badge-${idx}-${badgeIdx}`] = el}
-                          text={badge}
-                          scrambleSpeed={20}
-                          scrambledLetterCount={2}
-                          autoStart={false}
-                        />
-                      </Badge>
-                    ))}
-                  </span>
-                </CardContent>
-
-                <CardFooter>
-                  <Button>
-                    <a href={currentlyBuilding.projectDetailsLink} target="_blank" rel="noopener noreferrer">
-                      <ScrambleIn 
-                        ref={(el) => currentlyBuildingRefs.current[`view-${idx}`] = el}
-                        text="View details"
-                        scrambleSpeed={25}
-                        scrambledLetterCount={3}
-                        autoStart={false}
-                      />
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
+                  </button>
+                </div>
+                
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out w-full ${
+                  isExpanded ? 'max-h-[2000px] opacity-100 pt-4' : 'max-h-0 opacity-0'
+                }`}>
+                    <Card className="border-0 shadow-none p-0">
+                      <CardContent className="flex flex-col gap-4 p-0">
+                        <p className='text-xs'>
+                          {currentlyBuilding.description}
+                        </p>
+                        {currentlyBuilding.videoLink && (
+                          <MediaPlayer title={currentlyBuilding.name} src={currentlyBuilding.videoLink}>
+                            <MediaProvider />
+                            <PlyrLayout icons={plyrLayoutIcons}/>
+                          </MediaPlayer>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
             );
           })}
         </Section>
         <Section id='awards'> 
-          <h2 className="text-xl font-bold">
+          <h2 className="text-3xl font-bold tracking-tight">
             <ScrambleIn 
               ref={(el) => sectionHeadingRefs.current[1] = el}
-              text="Awards"
+              text="🏅"
               scrambleSpeed={30}
               scrambledLetterCount={3}
               autoStart={false}
             />
           </h2>
           {RESUME_DATA.awards.map((award, idx) => {
+            const isExpanded = expandedAwardItems.has(award.name);
             return (
-              <Card key={award.name} className="w-full mb-4">
-                <CardHeader>
-                  <div className="flex items-center gap-x-3">
-                    {award.logo && (
-                      <Image src={award.logo} alt={`${award.name} logo`} className="w-12 h-12 rounded-lg object-contain" />
-                    )}
-                    <div className="flex-grow">
-                      <div className="flex items-center justify-between gap-x-2 text-base">
-                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                          <a className="hover:underline max-w-[300px]" href={award.link} target="_blank" rel="noopener noreferrer">
-                            <ScrambleIn 
-                              ref={(el) => awardRefs.current[`name-${idx}`] = el}
-                              text={award.name}
-                              scrambleSpeed={25}
-                              scrambledLetterCount={3}
-                              autoStart={false}
-                            />
-                          </a>
-                        </h3>
-                        <div className="text-sm tabular-nums text-gray-500">
-                          <ScrambleIn 
-                            ref={(el) => awardRefs.current[`date-${idx}`] = el}
-                            text={award.date}
-                            scrambleSpeed={25}
-                            scrambledLetterCount={3}
-                            autoStart={false}
-                          />
-                        </div>
-                      </div>
-                      <h4 className="font-mono text-sm leading-none max-w-[500px] mt-1">
-                        <ScrambleIn 
-                          ref={(el) => awardRefs.current[`title-${idx}`] = el}
-                          text={award.title}
-                          scrambleSpeed={25}
-                          scrambledLetterCount={4}
-                          autoStart={false}
-                        />
-                      </h4>
-                    </div>
-                  </div>
-                </CardHeader>
-        
-                <CardContent className="flex flex-col mt-2 gap-4">
-                  <p className='text-xs'>
-                    <ScrambleIn 
-                      ref={(el) => awardRefs.current[`desc-${idx}`] = el}
-                      text={award.description}
-                      scrambleSpeed={20}
-                      scrambledLetterCount={5}
-                      autoStart={false}
-                    />
-                  </p>
-                  {award.videoLink && (
-                    <MediaPlayer title={award.name} src={award.videoLink}>
-                      <MediaProvider />
-                      <PlyrLayout icons={plyrLayoutIcons}/>
-                    </MediaPlayer>
+              <div key={award.name}>
+                <div className='flex flex-row w-full items-center justify-between border-b-2 border-transparent hover:border-[#f0ecec]'>
+                  {award.logo && (
+                      <Image src={award.logo} alt={`${award.name} logo`} className="w-7 h-7 rounded-lg object-contain mr-2" />
                   )}
-                  <span className="inline-flex gap-x-1">
-                    {award.badges.map((badge, badgeIdx) => (
-                      <Badge
-                        variant="secondary"
-                        className="align-middle text-xxs"
-                        key={badge}
-                      >
-                        <ScrambleIn 
-                          ref={(el) => awardRefs.current[`badge-${idx}-${badgeIdx}`] = el}
-                          text={badge}
-                          scrambleSpeed={20}
-                          scrambledLetterCount={2}
-                          autoStart={false}
+                  <button
+                    className="flex w-full items-center justify-between text-left"
+                    onClick={() => toggleAwardItem(award.name)}
+                  >
+                    <h1 className='text-[16px] md:text-xl lowercase'>
+                      {awardScrambleComplete.has(award.name) ? (
+                        <ScrambleHover
+                          text={award.name}
+                          scrambleSpeed={25}
+                          maxIterations={20}
                         />
-                      </Badge>
-                    ))}
-                  </span>
-                </CardContent>
-                
-                <CardFooter>
-                  <Button>
-                    <a href={award.projectDetailsLink} target="_blank" rel="noopener noreferrer">
-                      <ScrambleIn 
-                        ref={(el) => awardRefs.current[`view-${idx}`] = el}
-                        text="View details"
-                        scrambleSpeed={25}
-                        scrambledLetterCount={3}
-                        autoStart={false}
+                      ) : (
+                        <ScrambleIn 
+                          ref={(el) => awardRefs.current[`name-${idx}`] = el}
+                          text={award.name}
+                          scrambleSpeed={25}
+                          scrambledLetterCount={3}
+                          autoStart={false}
+                          onComplete={() => handleAwardScrambleComplete(award.name)}
+                        />
+                      )}
+                    </h1>
+                    <div className="flex flex-row items-center gap-2">
+                      <span className="text-[16px] md:text-xl">
+                        {award.year}
+                      </span>
+                      <ChevronDown
+                        strokeWidth={1}
+                        className={`h-8 w-8 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`}
                       />
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
+                    </div>
+                  </button>
+                </div>
+                
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isExpanded ? 'max-h-[2000px] opacity-100 pt-4' : 'max-h-0 opacity-0'
+                }`}>
+                  <Card className="border-0 shadow-none p-0">
+                    <CardContent className="flex flex-col gap-4 p-0">
+                      <p className='text-xs'>
+                        {award.description}
+                      </p>
+                      {award.videoLink && (
+                        <MediaPlayer title={award.name} src={award.videoLink}>
+                          <MediaProvider />
+                          <PlyrLayout icons={plyrLayoutIcons}/>
+                        </MediaPlayer>
+                      )}
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             );
           })}
         </Section> 
         <Section id='work-experience'> 
-          <h2 className="text-xl font-bold">
+          <h2 className="text-3xl font-bold tracking-tight">
             <ScrambleIn 
               ref={(el) => sectionHeadingRefs.current[3] = el}
-              text="Work Experience"
+              text="💼"
               scrambleSpeed={30}
               scrambledLetterCount={3}
               autoStart={false}
             />
           </h2>
-          {RESUME_DATA.work.map((work, idx) => {
+          {RESUME_DATA.work.map((work, idx) => {  
+            const isExpanded = expandedWorkItems.has(work.company);
             return (
-              <Card key={work.company} className="w-full mb-4">
-                <CardHeader>
-                  <div className="flex items-center gap-x-3">
-                    {work.logo && (
-                      <Image src={work.logo} alt={`${work.company} logo`} className="w-12 h-12 rounded-lg object-contain" />
-                    )}
-                    <div className="flex-grow">
-                      <div className="flex items-center justify-between gap-x-2 text-base">
-                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                          <a className="hover:underline" href={work.link} target="_blank" rel="noopener noreferrer">
-                            <ScrambleIn 
-                              ref={(el) => workRefs.current[`company-${idx}`] = el}
-                              text={work.company}
-                              scrambleSpeed={25}
-                              scrambledLetterCount={3}
-                              autoStart={false}
-                            />
-                          </a>
-                        </h3>
-                        <div className="text-sm tabular-nums text-gray-500">
-                          <ScrambleIn 
-                            ref={(el) => workRefs.current[`date-${idx}`] = el}
-                            text={`${work.start} - ${work.end}`}
-                            scrambleSpeed={25}
-                            scrambledLetterCount={3}
-                            autoStart={false}
-                          />
-                        </div>
-                      </div>
-                      <h4 className="font-mono text-sm leading-none max-w-[500px] mt-1">
-                        <ScrambleIn 
-                          ref={(el) => workRefs.current[`title-${idx}`] = el}
-                          text={work.title}
+              <div key={work.company}>
+                <div className='flex flex-row w-full items-center justify-between border-b-2 border-transparent hover:border-[#f0ecec]'>
+                  {work.logo && (
+                      <Image src={work.logo} alt={`${work.company} logo`} className="w-7 h-7 rounded-lg object-contain mr-2" />
+                  )}
+                  <button
+                    className="flex w-full items-center justify-between text-left"
+                    onClick={() => toggleWorkItem(work.company)}
+                  >
+                    <h1 className='text-[16px] md:text-xl lowercase'>
+                      {workScrambleComplete.has(work.company) ? (
+                        <ScrambleHover
+                          text={work.oneLiner}
                           scrambleSpeed={25}
-                          scrambledLetterCount={4}
-                          autoStart={false}
+                          maxIterations={20}
                         />
-                      </h4>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  <ScrambleIn 
-                    ref={(el) => workRefs.current[`desc-${idx}`] = el}
-                    text={work.description}
-                    scrambleSpeed={20}
-                    scrambledLetterCount={5}
-                    autoStart={false}
-                  />
-                  {/* <span className="inline-flex gap-x-1 mt-4">
-                    {work.badges.map((badge, badgeIdx) => (
-                      <Badge
-                        variant="secondary"
-                        className="align-middle text-xxs"
-                        key={badge}
-                      >
+                      ) : (
                         <ScrambleIn 
-                          ref={(el) => workRefs.current[`badge-${idx}-${badgeIdx}`] = el}
-                          text={badge}
-                          scrambleSpeed={20}
-                          scrambledLetterCount={2}
+                          ref={(el) => workRefs.current[`company-${idx}`] = el}
+                          text={work.oneLiner}
+                          scrambleSpeed={25}
+                          scrambledLetterCount={3}
                           autoStart={false}
+                          onComplete={() => handleWorkScrambleComplete(work.company)}
                         />
-                      </Badge>
-                    ))}
-                  </span> */}
-                </CardContent>
-              </Card>
+                      )}
+                    </h1>
+                    <div className="flex flex-row items-center gap-2">
+                      <span className="text-[16px] md:text-xl">
+                        {work.year}
+                      </span>
+                      <ChevronDown
+                        strokeWidth={1}
+                        className={`h-8 w-8 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </div>
+                  </button>
+                </div>
+                
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out w-full ${
+                  isExpanded ? 'max-h-[2000px] opacity-100 pt-4' : 'max-h-0 opacity-0'
+                }`}>
+                  <Card className="border-0 shadow-none p-0">
+                    <CardContent className="flex flex-col gap-4 p-0">
+                      <p className='text-xs'>
+                        {work.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             );
           })}
         </Section>
         <Section id='education'> 
-          <h2 className="text-xl font-bold">
+          <h2 className="text-3xl font-bold tracking-tight">
             <ScrambleIn 
               ref={(el) => sectionHeadingRefs.current[2] = el}
-              text="Education"
+              text="🎓"
               scrambleSpeed={30}
               scrambledLetterCount={3}
               autoStart={false}
@@ -542,96 +544,33 @@ const Page = () => {
           </h2>
           {RESUME_DATA.education.map((education, idx) => {
             return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center gap-x-3">
+              <div key={education.school}>
+                <div className='flex flex-col sm:flex-row w-full sm:items-center justify-between gap-2 sm:gap-0'>
+                  <div className="flex items-center">
                     {education.logo && (
-                      <Image src={education.logo} alt={`${education.school} logo`} className="w-12 h-12 rounded-lg object-contain" />
+                        <Image src={education.logo} alt={`${education.school} logo`} className="w-7 h-7 rounded-lg object-contain mr-2" />
                     )}
-                    <div className='flex-grow'>
-                      <div className="flex items-center justify-between gap-x-2 text-base">
-                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                          <p>
-                            <ScrambleIn 
-                              ref={(el) => educationRefs.current[`school-${idx}`] = el}
-                              text={education.school}
-                              scrambleSpeed={25}
-                              scrambledLetterCount={3}
-                              autoStart={false}
-                            />
-                          </p>
-                        </h3>
-                        <div className="text-sm tabular-nums text-gray-500">
-                          <ScrambleIn 
-                            ref={(el) => educationRefs.current[`date-${idx}`] = el}
-                            text={`${education.start} - ${education.end}`}
-                            scrambleSpeed={25}
-                            scrambledLetterCount={3}
-                            autoStart={false}
-                          />
-                        </div>
-                      </div>
-
-                      <h4 className="font-mono text-sm leading-none max-w-[500px]">
-                        <ScrambleIn 
-                          ref={(el) => educationRefs.current[`degree-${idx}`] = el}
-                          text={education.degree}
-                          scrambleSpeed={25}
-                          scrambledLetterCount={4}
-                          autoStart={false}
-                        />
-                      </h4>
-                    </div>
+                    <h1 className='text-[16px] md:text-xl'>
+                      <ScrambleIn 
+                        ref={(el) => educationRefs.current[`school-${idx}`] = el}
+                        text={education.oneLiner}
+                        scrambleSpeed={25}
+                        scrambledLetterCount={3}
+                        autoStart={false}
+                      />
+                    </h1>
                   </div>
-                </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  <ScrambleIn 
-                    ref={(el) => educationRefs.current[`activities-${idx}`] = el}
-                    text={education.activities}
-                    scrambleSpeed={20}
-                    scrambledLetterCount={5}
-                    autoStart={false}
-                  />
-                </CardContent>
-              </Card>
+                  <div className="flex flex-row items-center gap-2 sm:ml-4">
+                    <span className="text-[16px] md:text-xl">
+                      {`${education.start} - ${education.end}`}
+                    </span>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </Section>
-       
-        {/* <Section id='music'> 
-          <h2 className="text-xl font-bold">
-            <ScrambleIn 
-              ref={(el) => sectionHeadingRefs.current[4] = el}
-              text="Music"
-              scrambleSpeed={30}
-              scrambledLetterCount={3}
-              autoStart={false}
-            />
-          </h2>
-          {RESUME_DATA.music.map((award) => {
-            return (
-              <Card key={award.awardName} className='text-sm'>
-                <CardHeader>
-                  <h3 className="font-semibold">{award.awardName}</h3>
-                  <div className="text-sm text-gray-500">{award.year}</div>
-                </CardHeader>
-                <CardContent>
-                  {award.description}
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Section> */}
       </section>
-
-      <CommandMenu
-        links={[
-          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-            url: socialMediaLink.url,
-            title: socialMediaLink.name,
-          })),
-        ]}
-      />
     </main>
   )
 }
