@@ -97,7 +97,7 @@ export const RESUME_DATA = {
   currentlyBuilding: [
     {
       name: 'brandthetics.com',
-      link: 'https://brandthetics.co',
+      link: 'https://brandthetics.com',
       badges: ["Startup", "Branding tool", "Short form content"],
       title: "Create and manage branding for your business",
       logo: Brandthetics,
