@@ -1,4 +1,4 @@
-import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon, YouTubeIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon, XIcon, InstagramIcon, YouTubeIcon, SpotifyIcon } from "@/components/icons";
 import { RexanWong, CityUniversityLogo, EthGlobalLogo, IEEELogo, ThirdwebLogo, Cosensys, DeveloperDao, Apple, Olympiad, Arta, Cryptoblk, HKIS, CAIS, VideoFast, TextBehindImage, Bulletpen, TwentyFourLabs, MakeAd, Brandthetics } from "@/public";
 
 export const RESUME_DATA = {
@@ -58,6 +58,14 @@ export const RESUME_DATA = {
         icon: LinkedInIcon,
         iconEmoji: null,
         description: "My résumé"
+      },
+      {
+        name: "Spotify",
+        handle: null,
+        url: "https://open.spotify.com/user/31hozdufj77j63zwfoekvhfckz7i?si=9c16240e84f64148",
+        icon: SpotifyIcon,
+        iconEmoji: null,
+        description: "My music playlists"
       },
       {
         name: "Build in Public Playbook",
