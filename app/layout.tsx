@@ -13,7 +13,7 @@ export const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+  title: `rexan wong`,
 };
 
 export default function RootLayout({
